@@ -43,8 +43,8 @@ body { font-family: 'Epilogue', sans-serif; color: var(--body); background: var(
 .cursor { position: fixed; width: 10px; height: 10px; background: var(--mint); border-radius: 50%; pointer-events: none; z-index: 9999; transition: transform 0.15s ease; transform: translate(-50%,-50%); }
 .cursor-ring { position: fixed; width: 36px; height: 36px; border: 1.5px solid var(--mint); border-radius: 50%; pointer-events: none; z-index: 9998; opacity: 0.5; transition: all 0.25s ease; transform: translate(-50%,-50%); }
 
-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 20px 60px; background: rgba(255,255,255,0.92); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); transition: all 0.3s; }
-nav.scrolled { padding: 14px 60px; }
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 14px 60px; background: rgba(255,255,255,0.92); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); transition: all 0.3s; }
+nav.scrolled { padding: 10px 60px; }
 .nav-logo { display:flex; align-items:center; text-decoration:none; font-family: 'Syne', sans-serif; font-weight: 800; font-size: 20px; color: var(--dt); letter-spacing: -0.5px; }
 .nav-logo img { transition: filter 0.3s; }
 nav.scrolled .nav-logo img, nav.dark .nav-logo img { filter: brightness(0) invert(1); }
@@ -215,8 +215,8 @@ nav.scrolled .nav-logo img, nav.dark .nav-logo img { filter: brightness(0) inver
 
 @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
 
-footer { background: var(--black); padding: 26px 60px; display: flex; align-items: center; justify-content: space-between; }
-footer .logo { font-family: 'Syne', sans-serif; font-size: 16px; font-weight: 800; color: var(--mint); }
+footer { background: var(--black); padding: 28px 60px; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+footer .logo { display: flex; align-items: center; }
 footer .copy { font-size: 12px; color: rgba(255,255,255,0.22); }
 footer .website { font-size: 12px; color: rgba(255,255,255,0.32); text-decoration: none; }
 footer .website:hover { color: var(--mint); }
@@ -230,7 +230,7 @@ footer .website:hover { color: var(--mint); }
 <!-- NAV -->
 <nav id="navbar">
   <a class="nav-logo" href="#hero" style="display:flex;align-items:center;">
-    <img src="https://res.cloudinary.com/ds8zdlhmt/image/upload/v1774274972/EAS_Agency_dtcyn6.png" alt="EAS Agency" style="height:38px;width:auto;object-fit:contain;display:block;">
+    <img src="https://res.cloudinary.com/ds8zdlhmt/image/upload/v1774274972/EAS_Agency_dtcyn6.png" alt="EAS Agency" style="height:56px;width:auto;object-fit:contain;display:block;">
   </a>
   <ul class="nav-links">
     <li><a href="#intro">About</a></li>
@@ -694,7 +694,7 @@ footer .website:hover { color: var(--mint); }
 
 <footer>
   <div class="logo">
-    <img src="https://res.cloudinary.com/ds8zdlhmt/image/upload/v1774274972/EAS_Agency_dtcyn6.png" alt="EAS Agency" style="height:32px;width:auto;object-fit:contain;filter:brightness(0) invert(1);opacity:0.8;">
+    <img src="https://res.cloudinary.com/ds8zdlhmt/image/upload/v1774274972/EAS_Agency_dtcyn6.png" alt="EAS Agency" style="height:48px;width:auto;object-fit:contain;filter:brightness(0) invert(1);opacity:1;">
   </div>
   <div class="copy">© 2026 EAS Agency · Emmanuel Aderemi · AI Automation & Digital Marketing Consultant · Serving clients worldwide</div>
   <a href="https://emmieautomate.com" class="website" target="_blank">emmieautomate.com</a>
