@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>5-Minute AI Marketing Audit — EAS Agency</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --teal:#0D4F52; --mid:#146E6E; --mint:#5CE8C4; --mint2:#3BB89A;
+      --gold:#D4A017; --gold-bg:#FFFBEA;
+      --white:#fff; --off:#F4FAFA; --dark:#0A1A1A; --gray:#4A6C6F;
+      --lt:#EAF2F2; --border:rgba(13,79,82,.12);
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:'DM Sans',sans-serif;background:var(--off);color:var(--dark);line-height:1.65;-webkit-font-smoothing:antialiased}
+    nav{background:var(--teal);padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:12px;position:sticky;top:0;z-index:100}
+    .nav-logo{font-family:'Syne',sans-serif;font-weight:800;font-size:18px;color:var(--mint);letter-spacing:1px;text-decoration:none}
+    .nav-cta{background:var(--mint);color:var(--teal);font-family:'Syne',sans-serif;font-weight:700;font-size:13px;padding:9px 22px;border-radius:8px;text-decoration:none;transition:opacity .2s}
+    .nav-cta:hover{opacity:.85}
+    .wrap{max-width:860px;margin:0 auto;padding:0 24px}
+    .hero{background:var(--teal);padding:72px 24px 80px;text-align:center}
+    .hero-badge{display:inline-flex;align-items:center;gap:7px;background:rgba(92,232,196,.12);border:1px solid rgba(92,232,196,.3);border-radius:100px;padding:6px 16px;font-size:12px;font-weight:500;color:var(--mint);letter-spacing:.5px;text-transform:uppercase;margin-bottom:24px}
+    .hero h1{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(28px,5vw,48px);color:#fff;line-height:1.15;max-width:680px;margin:0 auto 16px}
+    .hero h1 em{color:var(--mint);font-style:normal}
+    .hero p{font-size:17px;color:rgba(255,255,255,.7);max-width:500px;margin:0 auto 32px;font-weight:300}
+    .btn-primary{display:inline-block;background:var(--mint);color:var(--teal);font-family:'Syne',sans-serif;font-weight:700;font-size:15px;padding:15px 36px;border-radius:12px;text-decoration:none;transition:all .2s;border:none;cursor:pointer}
+    .btn-primary:hover{background:var(--mint2);transform:translateY(-2px);box-shadow:0 10px 28px rgba(92,232,196,.35)}
+    .btn-outline{display:inline-block;background:transparent;color:var(--teal);font-family:'Syne',sans-serif;font-weight:700;font-size:14px;padding:13px 28px;border-radius:10px;text-decoration:none;border:1.5px solid var(--border);transition:all .2s;cursor:pointer}
+    .btn-outline:hover{background:var(--lt)}
+    .sec{padding:72px 24px}
+    .sec-label{font-size:11px;font-weight:600;color:var(--mid);text-transform:uppercase;letter-spacing:2px;text-align:center;margin-bottom:10px}
+    .sec-title{font-family:'Syne',sans-serif;font-weight:700;font-size:clamp(22px,3.5vw,34px);color:var(--teal);text-align:center;margin-bottom:8px}
+    .sec-sub{font-size:16px;color:var(--gray);text-align:center;margin-bottom:48px;font-weight:300}
+    .cta-strip{background:var(--teal);padding:64px 24px;text-align:center}
+    .cta-strip h2{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(22px,4vw,36px);color:#fff;margin-bottom:12px}
+    .cta-strip p{font-size:16px;color:rgba(255,255,255,.65);margin-bottom:28px;max-width:480px;margin-left:auto;margin-right:auto}
+    .cta-note{font-size:13px;color:rgba(255,255,255,.4);margin-top:12px;font-style:italic}
+    footer{background:var(--dark);padding:24px;text-align:center}
+    .foot-logo{font-family:'Syne',sans-serif;font-weight:800;font-size:15px;color:var(--mint);letter-spacing:1px;margin-bottom:6px}
+    .foot-text{font-size:12px;color:rgba(255,255,255,.35)}
+    .fade{opacity:0;transform:translateY(18px);transition:opacity .55s ease,transform .55s ease}
+    .fade.in{opacity:1;transform:none}
+  </style>
+<style>
+  .audit-progress{height:6px;background:var(--lt);border-radius:4px;margin-bottom:40px;overflow:hidden}
+  .audit-bar{height:100%;background:var(--mint);border-radius:4px;transition:width .4s ease}
+  .audit-section{display:none}.audit-section.active{display:block}
+  .section-header{background:var(--teal);border-radius:14px;padding:22px 24px;margin-bottom:24px}
+  .section-name{font-family:'Syne',sans-serif;font-size:20px;font-weight:700;color:#fff;margin-bottom:4px}
+  .section-q{font-size:14px;color:rgba(255,255,255,.65)}
+  .check-item{display:flex;align-items:flex-start;gap:14px;padding:18px;background:var(--white);border:1.5px solid var(--border);border-radius:12px;margin-bottom:12px;cursor:pointer;transition:all .2s}
+  .check-item:hover{border-color:var(--mint2);background:var(--lt)}
+  .check-item.checked{border-color:var(--mint);background:var(--lt)}
+  .check-box{width:22px;height:22px;border:2px solid var(--border);border-radius:6px;flex-shrink:0;margin-top:1px;display:flex;align-items:center;justify-content:center;transition:all .2s}
+  .check-item.checked .check-box{background:var(--teal);border-color:var(--teal)}
+  .check-mark{display:none;color:var(--mint);font-size:14px;font-weight:700}
+  .check-item.checked .check-mark{display:block}
+  .check-text{font-size:14px;color:var(--dark);line-height:1.5}
+  .check-item.checked .check-text{color:var(--teal)}
+  .score-badge{font-family:'Syne',sans-serif;font-size:12px;font-weight:700;color:var(--gray);margin-left:auto;flex-shrink:0;padding-top:2px}
+  .check-item.checked .score-badge{color:var(--mint2)}
+  .nav-btns{display:flex;gap:12px;justify-content:flex-end;margin-top:24px}
+  .result-card{background:var(--white);border:1.5px solid var(--border);border-radius:16px;padding:28px;margin-bottom:18px}
+  .result-score{font-family:'Syne',sans-serif;font-size:48px;font-weight:800;color:var(--teal);line-height:1}
+  .result-label{font-size:14px;color:var(--gray);margin-top:4px}
+  .result-section{display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid var(--border)}
+  .result-section:last-child{border-bottom:none}
+  .result-section-name{font-size:14px;color:var(--dark);font-weight:500}
+  .result-section-score{font-family:'Syne',sans-serif;font-size:18px;font-weight:700;color:var(--teal)}
+  .result-bar-wrap{height:6px;background:var(--lt);border-radius:4px;flex:1;margin:0 16px}
+  .result-bar{height:100%;border-radius:4px;background:var(--mint);transition:width .6s ease}
+  .band-card{border-radius:12px;padding:20px 22px;margin-bottom:12px}
+  .band-card.active-band{border:2px solid var(--mint)}
+</style>
+</head>
+<body>
+<nav>
+  <a href="#" class="nav-logo">EAS Agency</a>
+  <a href="https://flutterwave.com/pay/zjmiajkwvf3q" target="_blank" rel="noopener" class="nav-cta">Join the Cohort →</a>
+</nav>
+
+<section class="hero">
+  <div class="hero-badge">Free Tool</div>
+  <h1>5-Minute <em>AI Marketing Audit</em></h1>
+  <p>Score your marketing system across 5 dimensions. Find the gaps. Know exactly what to fix first.</p>
+</section>
+
+<section class="sec" style="background:var(--white)">
+  <div class="wrap">
+    <div id="audit-view">
+      <div class="audit-progress"><div class="audit-bar" id="progress-bar" style="width:20%"></div></div>
+      <div id="step-label" style="font-size:12px;font-weight:600;color:var(--gray);text-transform:uppercase;letter-spacing:1px;margin-bottom:20px;text-align:center">Section 1 of 5</div>
+
+      
+      <div class="audit-section active" id="sec-0">
+        <div class="section-header">
+          <div class="section-name">Content Creation</div>
+          <div class="section-q">How efficiently are you creating marketing content?</div>
+        </div>
+        
+        <div class="check-item" onclick="toggleCheck(this,0,0)">
+          <div class="check-box"><span class="check-mark">✓</span></div>
+          <div class="check-text">I have a documented brand voice guide that I give to AI before every writing task</div>
+          <div class="score-badge">+1 point</div>
+        </div>
+        <div class="check-item" onclick="toggleCheck(this,0,1)">
+          <div class="check-box"><span class="check-mark">✓</span></div>
+          <div class="check-text">I use AI to generate a full week of social captions in under 60 minutes</div>
+          <div class="score-badge">+1 point</div>
+        </div>
+        <div class="check-item" onclick="toggleCheck(this,0,2)">
+          <div class="check-box"><span class="check-mark">✓</span></div>
+          <div class="check-text">I have a repurposing system that turns one pillar piece into 6+ derivative pieces</div>
+          <div class="score-badge">+1 point</div>
+        </div>
+        <div class="check-item" onclick="toggleCheck(this,0,3)">
+          <div class="check-box"><span class="check-mark">✓</span></div>
+          <div class="check-text">I have a 30-day content calendar planned at least 2 weeks ahead</div>
+          <div class="score-badge">+1 point</div>
+        </div>
+        <div class="check-item" onclick="toggleCheck(this,0,4)">
+          <div class="check-box"><span class="check-mark">✓</span></div>
+          <div class="check-text">I use AI to generate video or Reel scripts before filming</div>
+          <div class="score-badge">+1 point</div>
+        </div>
+        <div style="background:var(--lt);border-radius:10px;padding:14px 18px;margin-top:16px;display:flex;justify-content:space-between;align-items:center">
+          <span style="font-size:13px;color:var(--gray)">Section score</span>
+          <span id="sec-score-0" style="font-family:'Syne',sans-serif;font-weight:700;color:var(--teal);font-size:18px">0 / 5</span>
+        </div>
+        <div class="nav-btns">
+          
+          <button class="btn-primary" onclick="goSec(1)">Next Section →</button>
+        </div>
+      </div>
+      <div class="audit-section" id="sec-1">
+        <div class="section-header">
+          <div class="section-name">Social Media Automation</div>
+          <div class="section-q">Is your social media running on autopilot or running you?</div>
+        </div>
+        
+        <div class="check-item" onclick="toggleCheck(this,1,0)">
+          <div class="check-box"><span class="check-mark">✓</span></div>
+          <div class="check-text">I use a scheduling tool (Buffer, Metricool, or Publer) to post automatically</div>
+          <div class="score-badge">+1 point</div>
+        </div>
+        <div class="check-item" onclick="toggleCheck(this,1,1)">
+          <div class="check-box"><span class="check-mark">✓</span></div>
+          <div class="check-text">I have a Hook Bank of at least 30 proven hooks I reuse and adapt</div>
+          <div class="score-badge">+1 point</div>
+        </div>
+        <div class="check-item" onclick="toggleCheck(this,1,2)">
+          <div class="check-box"><span class="check-mark">✓</span></div>
+          <div class="check-text">My social posts go out consistently at least 4 times per week without manual effort</div>
+          <div class="score-badge">+1 point</div>
+        </div>
+        <div class="check-item" onclick="toggleCheck(this,1,3)">
+          <div class="check-box"><span class="check-mark">✓</span></div>
+          <div class="check-text">I spend 15 minutes or less per day on social media engagement</div>
+          <div class="score-badge">+1 point</div>
+        </div>
+        <div class="check-item" onclick="toggleCheck(this,1,4)">
+          <div class="check-box"><span class="check-mark">✓</span></div>
+          <div class="check-text">I have set up at least one auto-repurposing workflow</div>
+          <div class="score-badge">+1 point</div>
+        </div>
+        <div style="background:var(--lt);border-radius:10px;padding:14px 18px;margin-top:16px;display:flex;justify-content:space-between;align-items:center">
+          <span style="font-size:13px;color:var(--gray)">Section score</span>
+          <span id="sec-score-1" style="font-family:'Syne',sans-serif;font-weight:700;color:var(--teal);font-size:18px">0 / 5</span>
+        </div>
+        <div class="nav-btns">
+          <button class="btn-outline" onclick="goSec(0)">← Back</button>
+          <button class="btn-primary" onclick="goSec(2)">Next Section →</button>
+        </div>
+      </div>
+      <div class="audit-section" id="sec-2">
+        <div class="section-header">
+          <div class="section-name">Email Marketing</div>
+          <div class="section-q">Is your email list working for your business while you sleep?</div>
+        </div>
+        
+        <div class="check-item" onclick="toggleCheck(this,2,0)">
+          <div class="check-box"><span class="check-mark">✓</span></div>
+          <div class="check-text">I have a welcome email sequence (at least 3 emails) set up and running automatically</div>
+          <div class="score-badge">+1 point</div>
+        </div>
+        <div class="check-item" onclick="toggleCheck(this,2,1)">
+          <div class="check-box"><span class="check-mark">✓</span></div>
+          <div class="check-text">My email open rate is above 25% for my active subscriber segment</div>
+          <div class="score-badge">+1 point</div>
+        </div>
+        <div class="check-item" onclick="toggleCheck(this,2,2)">
+          <div class="check-box"><span class="check-mark">✓</span></div>
+          <div class="check-text">I send a broadcast email to my list at least once per week</div>
+          <div class="score-badge">+1 point</div>
+        </div>
+        <div class="check-item" onclick="toggleCheck(this,2,3)">
+          <div class="check-box"><span class="check-mark">✓</span></div>
+          <div class="check-text">I have segmented my list by engagement level (active, cold, buyers)</div>
+          <div class="score-badge">+1 point</div>
+        </div>
+        <div class="check-item" onclick="toggleCheck(this,2,4)">
+          <div class="check-box"><span class="check-mark">✓</span></div>
+          <div class="check-text">I have at least one re-engagement sequence set up for cold subscribers</div>
+          <div class="score-badge">+1 point</div>
+        </div>
+        <div style="background:var(--lt);border-radius:10px;padding:14px 18px;margin-top:16px;display:flex;justify-content:space-between;align-items:center">
+          <span style="font-size:13px;color:var(--gray)">Section score</span>
+          <span id="sec-score-2" style="font-family:'Syne',sans-serif;font-weight:700;color:var(--teal);font-size:18px">0 / 5</span>
+        </div>
+        <div class="nav-btns">
+          <button class="btn-outline" onclick="goSec(1)">← Back</button>
+          <button class="btn-primary" onclick="goSec(3)">Next Section →</button>
+        </div>
+      </div>
+      <div class="audit-section" id="sec-3">
+        <div class="section-header">
+          <div class="section-name">CRM & Follow-Up</div>
+          <div class="section-q">Are you losing leads because your follow-up is inconsistent?</div>
+        </div>
+        
+        <div class="check-item" onclick="toggleCheck(this,3,0)">
+          <div class="check-box"><span class="check-mark">✓</span></div>
+          <div class="check-text">I have a CRM set up with a clear pipeline showing every lead's current stage</div>
+          <div class="score-badge">+1 point</div>
+        </div>
+        <div class="check-item" onclick="toggleCheck(this,3,1)">
+          <div class="check-box"><span class="check-mark">✓</span></div>
+          <div class="check-text">I have an automated follow-up that fires within 48 hours if a lead does not respond</div>
+          <div class="score-badge">+1 point</div>
+        </div>
+        <div class="check-item" onclick="toggleCheck(this,3,2)">
+          <div class="check-box"><span class="check-mark">✓</span></div>
+          <div class="check-text">Every new enquiry receives a response within 2 hours — automatically or manually</div>
+          <div class="score-badge">+1 point</div>
+        </div>
+        <div class="check-item" onclick="toggleCheck(this,3,3)">
+          <div class="check-box"><span class="check-mark">✓</span></div>
+          <div class="check-text">I have a proposal follow-up sequence that sends if a client goes quiet</div>
+          <div class="score-badge">+1 point</div>
+        </div>
+        <div class="check-item" onclick="toggleCheck(this,3,4)">
+          <div class="check-box"><span class="check-mark">✓</span></div>
+          <div class="check-text">When I win a deal, an onboarding sequence starts automatically</div>
+          <div class="score-badge">+1 point</div>
+        </div>
+        <div style="background:var(--lt);border-radius:10px;padding:14px 18px;margin-top:16px;display:flex;justify-content:space-between;align-items:center">
+          <span style="font-size:13px;color:var(--gray)">Section score</span>
+          <span id="sec-score-3" style="font-family:'Syne',sans-serif;font-weight:700;color:var(--teal);font-size:18px">0 / 5</span>
+        </div>
+        <div class="nav-btns">
+          <button class="btn-outline" onclick="goSec(2)">← Back</button>
+          <button class="btn-primary" onclick="goSec(4)">Next Section →</button>
+        </div>
+      </div>
+      <div class="audit-section" id="sec-4">
+        <div class="section-header">
+          <div class="section-name">Analytics & Paid Ads</div>
+          <div class="section-q">Do you know what is working — and what is wasting your budget?</div>
+        </div>
+        
+        <div class="check-item" onclick="toggleCheck(this,4,0)">
+          <div class="check-box"><span class="check-mark">✓</span></div>
+          <div class="check-text">I check my marketing analytics at least once per week and act on what I find</div>
+          <div class="score-badge">+1 point</div>
+        </div>
+        <div class="check-item" onclick="toggleCheck(this,4,1)">
+          <div class="check-box"><span class="check-mark">✓</span></div>
+          <div class="check-text">I can interpret my CTR, CPC, and ROAS without needing to ask someone else</div>
+          <div class="score-badge">+1 point</div>
+        </div>
+        <div class="check-item" onclick="toggleCheck(this,4,2)">
+          <div class="check-box"><span class="check-mark">✓</span></div>
+          <div class="check-text">I use AI to turn raw analytics data into plain-English recommendations</div>
+          <div class="score-badge">+1 point</div>
+        </div>
+        <div class="check-item" onclick="toggleCheck(this,4,3)">
+          <div class="check-box"><span class="check-mark">✓</span></div>
+          <div class="check-text">I run structured A/B tests with a clear hypothesis before spending on ads</div>
+          <div class="score-badge">+1 point</div>
+        </div>
+        <div class="check-item" onclick="toggleCheck(this,4,4)">
+          <div class="check-box"><span class="check-mark">✓</span></div>
+          <div class="check-text">I have an automated weekly report that updates without manual input</div>
+          <div class="score-badge">+1 point</div>
+        </div>
+        <div style="background:var(--lt);border-radius:10px;padding:14px 18px;margin-top:16px;display:flex;justify-content:space-between;align-items:center">
+          <span style="font-size:13px;color:var(--gray)">Section score</span>
+          <span id="sec-score-4" style="font-family:'Syne',sans-serif;font-weight:700;color:var(--teal);font-size:18px">0 / 5</span>
+        </div>
+        <div class="nav-btns">
+          <button class="btn-outline" onclick="goSec(3)">← Back</button>
+          <button class="btn-primary" onclick="showResults()">See My Results →</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="results-view" style="display:none">
+      <div style="text-align:center;margin-bottom:36px">
+        <div style="font-family:'Syne',sans-serif;font-weight:800;font-size:72px;color:var(--teal);line-height:1" id="total-score-display">0</div>
+        <div style="font-size:16px;color:var(--gray);margin-top:6px">out of 25 points</div>
+        <div style="font-family:'Syne',sans-serif;font-size:22px;font-weight:700;color:var(--teal);margin-top:12px" id="result-label-text"></div>
+      </div>
+
+      <div style="background:var(--white);border:1.5px solid var(--border);border-radius:16px;padding:28px;margin-bottom:24px">
+        <div style="font-family:'Syne',sans-serif;font-size:16px;font-weight:700;color:var(--teal);margin-bottom:18px">Score by section</div>
+        
+        <div class="result-section">
+          <span class="result-section-name">Content Creation</span>
+          <div class="result-bar-wrap"><div class="result-bar" id="rbar-0" style="width:0%"></div></div>
+          <span class="result-section-score" id="rscore-0">0/5</span>
+        </div>
+        <div class="result-section">
+          <span class="result-section-name">Social Media Automation</span>
+          <div class="result-bar-wrap"><div class="result-bar" id="rbar-1" style="width:0%"></div></div>
+          <span class="result-section-score" id="rscore-1">0/5</span>
+        </div>
+        <div class="result-section">
+          <span class="result-section-name">Email Marketing</span>
+          <div class="result-bar-wrap"><div class="result-bar" id="rbar-2" style="width:0%"></div></div>
+          <span class="result-section-score" id="rscore-2">0/5</span>
+        </div>
+        <div class="result-section">
+          <span class="result-section-name">CRM & Follow-Up</span>
+          <div class="result-bar-wrap"><div class="result-bar" id="rbar-3" style="width:0%"></div></div>
+          <span class="result-section-score" id="rscore-3">0/5</span>
+        </div>
+        <div class="result-section">
+          <span class="result-section-name">Analytics & Paid Ads</span>
+          <div class="result-bar-wrap"><div class="result-bar" id="rbar-4" style="width:0%"></div></div>
+          <span class="result-section-score" id="rscore-4">0/5</span>
+        </div>
+      </div>
+
+      <div id="result-desc" style="background:var(--lt);border:1.5px solid var(--border);border-radius:14px;padding:24px;margin-bottom:24px;font-size:15px;color:var(--dark);line-height:1.7"></div>
+
+      <div style="text-align:center">
+        <a href="#cta" class="btn-primary">Close the Gaps in 6 Weeks →</a>
+        <div style="margin-top:14px"><button class="btn-outline" onclick="resetAudit()">Retake the Audit</button></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-strip" id="cta">
+  <h2>Ready to close every gap you found?</h2>
+  <p>The cohort builds your complete AI Marketing OS across all 5 dimensions — in 6 live weeks.</p>
+  <a href="https://https://emmieautomate.com/sales" class="btn-primary" style="display:inline-block">Join the Cohort from $37</a>
+  <div class="cta-note">One-time payment · Lifetime access · 7-day money-back guarantee</div>
+</section>
+
+<footer>
+  <div class="foot-logo">EAS Agency</div>
+  <div class="foot-text">© 2025 EAS Agency · Free Tool · AI & Automation for Digital Marketing</div>
+</footer>
+
+<script>
+const scores = [0,0,0,0,0];
+const checked = Array.from({length:5},()=>[false,false,false,false,false]);
+
+function toggleCheck(el,si,ii) {
+  checked[si][ii] = !checked[si][ii];
+  el.classList.toggle('checked', checked[si][ii]);
+  scores[si] = checked[si].filter(Boolean).length;
+  document.getElementById('sec-score-'+si).textContent = scores[si]+' / 5';
+}
+
+function goSec(i) {
+  document.querySelectorAll('.audit-section').forEach((s,si)=>s.classList.toggle('active',si===i));
+  document.getElementById('progress-bar').style.width = ((i+1)/5*100)+'%';
+  document.getElementById('step-label').textContent = 'Section '+(i+1)+' of 5';
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function showResults() {
+  document.getElementById('audit-view').style.display='none';
+  document.getElementById('results-view').style.display='block';
+  const total = scores.reduce((a,b)=>a+b,0);
+  document.getElementById('total-score-display').textContent = total;
+
+  const bands = [
+    [23,25,'AI-Powered','Your marketing system is running at a high level. The cohort will help you connect all remaining layers and scale what is already working. You are ahead of most businesses in your space.'],
+    [17,22,'On Track','You have solid foundations but significant gaps remain. You are losing time and leads in the areas you have not yet automated. The cohort closes those gaps in 6 weeks.'],
+    [10,16,'Developing','You are doing some things well but most of your marketing is still manual. You are leaving significant time and revenue on the table. The cohort is built exactly for where you are now.'],
+    [0,9,'Starting Out','Most of your marketing is still manual and reactive. This is where the biggest transformation happens fastest. Every session of the cohort directly addresses a gap you just identified.'],
+  ];
+  const band = bands.find(([lo,hi])=>total>=lo&&total<=hi);
+  document.getElementById('result-label-text').textContent = band[2];
+  document.getElementById('result-desc').textContent = band[3];
+
+  scores.forEach((s,si)=>{
+    document.getElementById('rscore-'+si).textContent = s+'/5';
+    setTimeout(()=>{ document.getElementById('rbar-'+si).style.width=(s/5*100)+'%'; },100);
+  });
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function resetAudit() {
+  scores.fill(0);
+  checked.forEach(a=>a.fill(false));
+  document.querySelectorAll('.check-item').forEach(el=>el.classList.remove('checked'));
+  document.querySelectorAll('[id^=sec-score-]').forEach(el=>el.textContent='0 / 5');
+  document.getElementById('audit-view').style.display='block';
+  document.getElementById('results-view').style.display='none';
+  goSec(0);
+}
+</script>
+</body>
+</html>

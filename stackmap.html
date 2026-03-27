@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>AI Tool Stack Map — EAS Agency</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --teal:#0D4F52; --mid:#146E6E; --mint:#5CE8C4; --mint2:#3BB89A;
+      --gold:#D4A017; --gold-bg:#FFFBEA;
+      --white:#fff; --off:#F4FAFA; --dark:#0A1A1A; --gray:#4A6C6F;
+      --lt:#EAF2F2; --border:rgba(13,79,82,.12);
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:'DM Sans',sans-serif;background:var(--off);color:var(--dark);line-height:1.65;-webkit-font-smoothing:antialiased}
+    nav{background:var(--teal);padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:12px;position:sticky;top:0;z-index:100}
+    .nav-logo{font-family:'Syne',sans-serif;font-weight:800;font-size:18px;color:var(--mint);letter-spacing:1px;text-decoration:none}
+    .nav-cta{background:var(--mint);color:var(--teal);font-family:'Syne',sans-serif;font-weight:700;font-size:13px;padding:9px 22px;border-radius:8px;text-decoration:none;transition:opacity .2s}
+    .nav-cta:hover{opacity:.85}
+    .wrap{max-width:860px;margin:0 auto;padding:0 24px}
+    .hero{background:var(--teal);padding:72px 24px 80px;text-align:center}
+    .hero-badge{display:inline-flex;align-items:center;gap:7px;background:rgba(92,232,196,.12);border:1px solid rgba(92,232,196,.3);border-radius:100px;padding:6px 16px;font-size:12px;font-weight:500;color:var(--mint);letter-spacing:.5px;text-transform:uppercase;margin-bottom:24px}
+    .hero h1{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(28px,5vw,48px);color:#fff;line-height:1.15;max-width:680px;margin:0 auto 16px}
+    .hero h1 em{color:var(--mint);font-style:normal}
+    .hero p{font-size:17px;color:rgba(255,255,255,.7);max-width:500px;margin:0 auto 32px;font-weight:300}
+    .btn-primary{display:inline-block;background:var(--mint);color:var(--teal);font-family:'Syne',sans-serif;font-weight:700;font-size:15px;padding:15px 36px;border-radius:12px;text-decoration:none;transition:all .2s;border:none;cursor:pointer}
+    .btn-primary:hover{background:var(--mint2);transform:translateY(-2px);box-shadow:0 10px 28px rgba(92,232,196,.35)}
+    .btn-outline{display:inline-block;background:transparent;color:var(--teal);font-family:'Syne',sans-serif;font-weight:700;font-size:14px;padding:13px 28px;border-radius:10px;text-decoration:none;border:1.5px solid var(--border);transition:all .2s;cursor:pointer}
+    .btn-outline:hover{background:var(--lt)}
+    .sec{padding:72px 24px}
+    .sec-label{font-size:11px;font-weight:600;color:var(--mid);text-transform:uppercase;letter-spacing:2px;text-align:center;margin-bottom:10px}
+    .sec-title{font-family:'Syne',sans-serif;font-weight:700;font-size:clamp(22px,3.5vw,34px);color:var(--teal);text-align:center;margin-bottom:8px}
+    .sec-sub{font-size:16px;color:var(--gray);text-align:center;margin-bottom:48px;font-weight:300}
+    .cta-strip{background:var(--teal);padding:64px 24px;text-align:center}
+    .cta-strip h2{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(22px,4vw,36px);color:#fff;margin-bottom:12px}
+    .cta-strip p{font-size:16px;color:rgba(255,255,255,.65);margin-bottom:28px;max-width:480px;margin-left:auto;margin-right:auto}
+    .cta-note{font-size:13px;color:rgba(255,255,255,.4);margin-top:12px;font-style:italic}
+    footer{background:var(--dark);padding:24px;text-align:center}
+    .foot-logo{font-family:'Syne',sans-serif;font-weight:800;font-size:15px;color:var(--mint);letter-spacing:1px;margin-bottom:6px}
+    .foot-text{font-size:12px;color:rgba(255,255,255,.35)}
+    .fade{opacity:0;transform:translateY(18px);transition:opacity .55s ease,transform .55s ease}
+    .fade.in{opacity:1;transform:none}
+  </style>
+<style>
+  .layer-card{border-radius:16px;overflow:hidden;margin-bottom:20px;border:1.5px solid var(--border);transition:all .2s}
+  .layer-header{padding:20px 24px;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .layer-num{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;opacity:.8}
+  .layer-name{font-family:'Syne',sans-serif;font-size:18px;font-weight:800}
+  .layer-desc{font-size:13px;opacity:.7;margin-top:2px}
+  .layer-toggle{font-size:20px;opacity:.8;transition:transform .2s;flex-shrink:0}
+  .layer-card.open .layer-toggle{transform:rotate(45deg)}
+  .layer-body{display:none;padding:0 24px 24px;background:var(--white)}
+  .layer-card.open .layer-body{display:block}
+  .tool-row{margin-bottom:18px}
+  .tool-name{font-family:'Syne',sans-serif;font-size:13px;font-weight:700;color:var(--teal);margin-bottom:4px}
+  .tool-options{font-size:12px;color:var(--gray);margin-bottom:8px}
+  .tool-input{width:100%;padding:10px 14px;border:1.5px solid var(--border);border-radius:10px;font-size:14px;font-family:'DM Sans',sans-serif;color:var(--dark);background:var(--off);transition:border-color .2s;outline:none}
+  .tool-input:focus{border-color:var(--mint2)}
+  .completeness-bar{height:6px;background:var(--lt);border-radius:4px;overflow:hidden;margin:4px 0 2px}
+  .completeness-fill{height:100%;background:var(--mint);border-radius:4px;transition:width .4s ease}
+  .layer-status{font-size:12px;font-weight:600;margin-top:4px}
+  .gap-tag{display:inline-block;background:var(--lt);border-radius:6px;padding:4px 10px;font-size:11px;font-weight:600;color:var(--mid);margin:3px}
+</style>
+</head>
+<body>
+<nav>
+  <a href="#" class="nav-logo">EAS Agency</a>
+  <a href="https://flutterwave.com/pay/zjmiajkwvf3q" target="_blank" rel="noopener" class="nav-cta">Join the Cohort →</a>
+</nav>
+
+<section class="hero">
+  <div class="hero-badge">Free Tool</div>
+  <h1>Your <em>AI Tool Stack Map</em></h1>
+  <p>Map your complete AI marketing system across all 5 layers. See the gaps. Fill them in order of impact.</p>
+</section>
+
+<section class="sec" style="background:var(--white)">
+  <div class="wrap">
+    <div class="sec-label">5 Layers · 15 Tool Categories</div>
+    <h2 class="sec-title">Build Your Stack Layer by Layer</h2>
+    <p class="sec-sub">Click each layer to expand it. Fill in what you are currently using. Leave blank what you have not set up yet.</p>
+
+    <div id="score-summary" style="background:var(--lt);border-radius:14px;padding:20px 24px;margin-bottom:32px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px">
+      <div>
+        <div style="font-family:'Syne',sans-serif;font-size:14px;font-weight:700;color:var(--teal)">Stack Completeness</div>
+        <div style="font-size:13px;color:var(--gray);margin-top:2px">Fill in more rows to see your score</div>
+      </div>
+      <div style="text-align:right">
+        <div style="font-family:'Syne',sans-serif;font-size:32px;font-weight:800;color:var(--teal)" id="overall-score">0%</div>
+        <div style="font-size:12px;color:var(--gray)"><span id="filled-count">0</span> of 15 tools mapped</div>
+      </div>
+    </div>
+
+    
+    <div class="layer-card" id="layer-card-0">
+      <div class="layer-header" style="background:#0D4F52;color:#fff" onclick="toggleLayer(0)">
+        <div>
+          <div class="layer-num">Layer 01</div>
+          <div class="layer-name">Content Creation</div>
+          <div class="layer-desc">The tools that write, design, and produce your marketing content.</div>
+        </div>
+        <div>
+          <div style="font-family:'Syne',sans-serif;font-size:18px;font-weight:800;color:rgba(255,255,255,.9)" id="layer-pct-0">0%</div>
+          <div class="layer-toggle">+</div>
+        </div>
+      </div>
+      <div class="layer-body">
+        
+        <div class="tool-row">
+          <div class="tool-name">Writing & Copy</div>
+          <div class="tool-options">Options: ChatGPT / Claude / Jasper</div>
+          <input class="tool-input" type="text" placeholder="Which tool are you using for copy?" data-layer="0" data-tool="0" oninput="updateScore()" />
+        </div>
+        <div class="tool-row">
+          <div class="tool-name">Visuals & Design</div>
+          <div class="tool-options">Options: Canva AI / Adobe Firefly / DALL-E</div>
+          <input class="tool-input" type="text" placeholder="Which tool are you using for visuals?" data-layer="0" data-tool="1" oninput="updateScore()" />
+        </div>
+        <div class="tool-row">
+          <div class="tool-name">Video Scripts</div>
+          <div class="tool-options">Options: ChatGPT / Claude</div>
+          <input class="tool-input" type="text" placeholder="How do you script your videos?" data-layer="0" data-tool="2" oninput="updateScore()" />
+        </div>
+      </div>
+    </div>
+    <div class="layer-card" id="layer-card-1">
+      <div class="layer-header" style="background:#146E6E;color:#fff" onclick="toggleLayer(1)">
+        <div>
+          <div class="layer-num">Layer 02</div>
+          <div class="layer-name">Social Distribution</div>
+          <div class="layer-desc">The tools that schedule, post, and analyse your social content.</div>
+        </div>
+        <div>
+          <div style="font-family:'Syne',sans-serif;font-size:18px;font-weight:800;color:rgba(255,255,255,.9)" id="layer-pct-1">0%</div>
+          <div class="layer-toggle">+</div>
+        </div>
+      </div>
+      <div class="layer-body">
+        
+        <div class="tool-row">
+          <div class="tool-name">Scheduling</div>
+          <div class="tool-options">Options: Buffer / Metricool / Publer</div>
+          <input class="tool-input" type="text" placeholder="Which scheduling tool are you using?" data-layer="1" data-tool="0" oninput="updateScore()" />
+        </div>
+        <div class="tool-row">
+          <div class="tool-name">Analytics</div>
+          <div class="tool-options">Options: Buffer Analytics / Metricool / Native</div>
+          <input class="tool-input" type="text" placeholder="Where do you review social performance?" data-layer="1" data-tool="1" oninput="updateScore()" />
+        </div>
+        <div class="tool-row">
+          <div class="tool-name">Repurposing</div>
+          <div class="tool-options">Options: Otter.ai + ChatGPT / Opus Clip</div>
+          <input class="tool-input" type="text" placeholder="How do you repurpose content?" data-layer="1" data-tool="2" oninput="updateScore()" />
+        </div>
+      </div>
+    </div>
+    <div class="layer-card" id="layer-card-2">
+      <div class="layer-header" style="background:#1A8585;color:#fff" onclick="toggleLayer(2)">
+        <div>
+          <div class="layer-num">Layer 03</div>
+          <div class="layer-name">Email & Nurture</div>
+          <div class="layer-desc">The tools that build your list, send your emails, and nurture your leads.</div>
+        </div>
+        <div>
+          <div style="font-family:'Syne',sans-serif;font-size:18px;font-weight:800;color:rgba(255,255,255,.9)" id="layer-pct-2">0%</div>
+          <div class="layer-toggle">+</div>
+        </div>
+      </div>
+      <div class="layer-body">
+        
+        <div class="tool-row">
+          <div class="tool-name">Email Platform</div>
+          <div class="tool-options">Options: Mailchimp / ConvertKit / Brevo</div>
+          <input class="tool-input" type="text" placeholder="Which email platform are you using?" data-layer="2" data-tool="0" oninput="updateScore()" />
+        </div>
+        <div class="tool-row">
+          <div class="tool-name">Automation</div>
+          <div class="tool-options">Options: Built-in sequences / Zapier</div>
+          <input class="tool-input" type="text" placeholder="What sequences do you have running?" data-layer="2" data-tool="1" oninput="updateScore()" />
+        </div>
+        <div class="tool-row">
+          <div class="tool-name">Segmentation</div>
+          <div class="tool-options">Options: Tags / Lists / Segments</div>
+          <input class="tool-input" type="text" placeholder="How are you segmenting your list?" data-layer="2" data-tool="2" oninput="updateScore()" />
+        </div>
+      </div>
+    </div>
+    <div class="layer-card" id="layer-card-3">
+      <div class="layer-header" style="background:#0F6E56;color:#fff" onclick="toggleLayer(3)">
+        <div>
+          <div class="layer-num">Layer 04</div>
+          <div class="layer-name">CRM & Follow-Up</div>
+          <div class="layer-desc">The tools that track your leads and make sure nothing falls through the cracks.</div>
+        </div>
+        <div>
+          <div style="font-family:'Syne',sans-serif;font-size:18px;font-weight:800;color:rgba(255,255,255,.9)" id="layer-pct-3">0%</div>
+          <div class="layer-toggle">+</div>
+        </div>
+      </div>
+      <div class="layer-body">
+        
+        <div class="tool-row">
+          <div class="tool-name">CRM</div>
+          <div class="tool-options">Options: HubSpot / Notion / Pipedrive</div>
+          <input class="tool-input" type="text" placeholder="Which CRM are you using?" data-layer="3" data-tool="0" oninput="updateScore()" />
+        </div>
+        <div class="tool-row">
+          <div class="tool-name">Follow-Up Automation</div>
+          <div class="tool-options">Options: HubSpot Workflows / Zapier</div>
+          <input class="tool-input" type="text" placeholder="What is automated in your follow-up?" data-layer="3" data-tool="1" oninput="updateScore()" />
+        </div>
+        <div class="tool-row">
+          <div class="tool-name">Pipeline Stages</div>
+          <div class="tool-options">Options: Defined deal stages</div>
+          <input class="tool-input" type="text" placeholder="How many stages does your pipeline have?" data-layer="3" data-tool="2" oninput="updateScore()" />
+        </div>
+      </div>
+    </div>
+    <div class="layer-card" id="layer-card-4">
+      <div class="layer-header" style="background:#085041;color:#fff" onclick="toggleLayer(4)">
+        <div>
+          <div class="layer-num">Layer 05</div>
+          <div class="layer-name">Analytics & Ads</div>
+          <div class="layer-desc">The tools that tell you what is working and amplify what already performs.</div>
+        </div>
+        <div>
+          <div style="font-family:'Syne',sans-serif;font-size:18px;font-weight:800;color:rgba(255,255,255,.9)" id="layer-pct-4">0%</div>
+          <div class="layer-toggle">+</div>
+        </div>
+      </div>
+      <div class="layer-body">
+        
+        <div class="tool-row">
+          <div class="tool-name">Ad Platform</div>
+          <div class="tool-options">Options: Meta Ads / Google Ads / TikTok Ads</div>
+          <input class="tool-input" type="text" placeholder="Which ad platforms are you running?" data-layer="4" data-tool="0" oninput="updateScore()" />
+        </div>
+        <div class="tool-row">
+          <div class="tool-name">Analytics Dashboard</div>
+          <div class="tool-options">Options: Looker Studio / Native Analytics</div>
+          <input class="tool-input" type="text" placeholder="Where do you see all your data?" data-layer="4" data-tool="1" oninput="updateScore()" />
+        </div>
+        <div class="tool-row">
+          <div class="tool-name">Reporting</div>
+          <div class="tool-options">Options: AI weekly report prompt / Looker Studio</div>
+          <input class="tool-input" type="text" placeholder="How often do you review and act on data?" data-layer="4" data-tool="2" oninput="updateScore()" />
+        </div>
+      </div>
+    </div>
+
+    <div id="gaps-section" style="margin-top:32px;display:none">
+      <h3 style="font-family:'Syne',sans-serif;font-size:18px;font-weight:700;color:var(--teal);margin-bottom:12px">Your Identified Gaps</h3>
+      <div id="gaps-list"></div>
+    </div>
+
+    <div style="margin-top:36px;text-align:center">
+      <a href="#cta" class="btn-primary">Build All 5 Layers in 6 Weeks →</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="background:var(--off)">
+  <div class="wrap">
+    <div class="sec-label">How to Read Your Map</div>
+    <h2 class="sec-title">What Each Layer Means</h2>
+    <p class="sec-sub">Each layer builds on the one before it. A gap in Layer 2 means Layer 3 has nothing to distribute.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px">
+      <div style="background:var(--white);border:1.5px solid var(--border);border-radius:14px;padding:20px 18px">
+        <div style="font-family:'Syne',sans-serif;font-size:14px;font-weight:700;color:var(--teal);margin-bottom:8px">Layers with no tools</div>
+        <div style="font-size:13px;color:var(--gray);line-height:1.6">These are your biggest gaps. Hours being lost every week to manual work. Fix these first.</div>
+      </div><div style="background:var(--white);border:1.5px solid var(--border);border-radius:14px;padding:20px 18px">
+        <div style="font-family:'Syne',sans-serif;font-size:14px;font-weight:700;color:var(--teal);margin-bottom:8px">Layers with tools, no automation</div>
+        <div style="font-size:13px;color:var(--gray);line-height:1.6">You have the tool but not the workflow. Most small businesses live here. The cohort fixes this layer by layer.</div>
+      </div><div style="background:var(--white);border:1.5px solid var(--border);border-radius:14px;padding:20px 18px">
+        <div style="font-family:'Syne',sans-serif;font-size:14px;font-weight:700;color:var(--teal);margin-bottom:8px">Layers fully automated</div>
+        <div style="font-size:13px;color:var(--gray);line-height:1.6">These layers are working for you. Note what is performing and use those learnings to improve the weaker layers.</div>
+      </div><div style="background:var(--white);border:1.5px solid var(--border);border-radius:14px;padding:20px 18px">
+        <div style="font-family:'Syne',sans-serif;font-size:14px;font-weight:700;color:var(--teal);margin-bottom:8px">Gaps between layers</div>
+        <div style="font-size:13px;color:var(--gray);line-height:1.6">If your content is strong but your email layer is empty, you are creating content that has nowhere to convert.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-strip" id="cta">
+  <h2>Ready to fill every gap in your stack?</h2>
+  <p>The cohort builds all 5 layers — step by step, live, with real tools and real output every week.</p>
+  <a href="https://https://emmieautomate.com/sales" class="btn-primary" style="display:inline-block">Join the Cohort from $37</a>
+  <div class="cta-note">One-time payment · Lifetime access · 7-day money-back guarantee</div>
+</section>
+
+<footer>
+  <div class="foot-logo">EAS Agency</div>
+  <div class="foot-text">© 2025 EAS Agency · Free Tool · AI & Automation for Digital Marketing</div>
+</footer>
+
+<script>
+function toggleLayer(i) {
+  const card = document.getElementById('layer-card-'+i);
+  card.classList.toggle('open');
+  card.querySelector('.layer-toggle').textContent = card.classList.contains('open') ? '×' : '+';
+}
+
+function updateScore() {
+  const inputs = document.querySelectorAll('.tool-input');
+  let filled = 0;
+  const layerFilled = [0,0,0,0,0];
+  const gaps = [];
+
+  inputs.forEach(inp=>{
+    const li = parseInt(inp.dataset.layer);
+    const ti = parseInt(inp.dataset.tool);
+    if(inp.value.trim()) {
+      filled++;
+      layerFilled[li]++;
+    } else {
+      const layerName = ["Content Creation","Social Distribution","Email & Nurture","CRM & Follow-Up","Analytics & Ads"][li];
+      const toolName = [["Writing & Copy","Visuals & Design","Video Scripts"],["Scheduling","Analytics","Repurposing"],["Email Platform","Automation","Segmentation"],["CRM","Follow-Up Automation","Pipeline Stages"],["Ad Platform","Analytics Dashboard","Reporting"]][li][ti];
+      gaps.push(layerName+' → '+toolName);
+    }
+  });
+
+  document.getElementById('filled-count').textContent = filled;
+  document.getElementById('overall-score').textContent = Math.round(filled/15*100)+'%';
+
+  layerFilled.forEach((lf,li)=>{
+    document.getElementById('layer-pct-'+li).textContent = Math.round(lf/3*100)+'%';
+  });
+
+  const gapSection = document.getElementById('gaps-section');
+  if(gaps.length < 15) {
+    gapSection.style.display = 'block';
+    document.getElementById('gaps-list').innerHTML = gaps.map(function(g){return '<span class="gap-tag">&#9888; '+g+'</span>';}).join('');
+  }
+}
+
+// Open first layer by default
+toggleLayer(0);
+</script>
+</body>
+</html>

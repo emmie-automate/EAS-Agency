@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>30 AI Prompts for Digital Marketers — EAS Agency</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --teal:#0D4F52; --mid:#146E6E; --mint:#5CE8C4; --mint2:#3BB89A;
+      --gold:#D4A017; --gold-bg:#FFFBEA;
+      --white:#fff; --off:#F4FAFA; --dark:#0A1A1A; --gray:#4A6C6F;
+      --lt:#EAF2F2; --border:rgba(13,79,82,.12);
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:'DM Sans',sans-serif;background:var(--off);color:var(--dark);line-height:1.65;-webkit-font-smoothing:antialiased}
+    nav{background:var(--teal);padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:12px;position:sticky;top:0;z-index:100}
+    .nav-logo{font-family:'Syne',sans-serif;font-weight:800;font-size:18px;color:var(--mint);letter-spacing:1px;text-decoration:none}
+    .nav-cta{background:var(--mint);color:var(--teal);font-family:'Syne',sans-serif;font-weight:700;font-size:13px;padding:9px 22px;border-radius:8px;text-decoration:none;transition:opacity .2s}
+    .nav-cta:hover{opacity:.85}
+    .wrap{max-width:860px;margin:0 auto;padding:0 24px}
+    .hero{background:var(--teal);padding:72px 24px 80px;text-align:center}
+    .hero-badge{display:inline-flex;align-items:center;gap:7px;background:rgba(92,232,196,.12);border:1px solid rgba(92,232,196,.3);border-radius:100px;padding:6px 16px;font-size:12px;font-weight:500;color:var(--mint);letter-spacing:.5px;text-transform:uppercase;margin-bottom:24px}
+    .hero h1{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(28px,5vw,48px);color:#fff;line-height:1.15;max-width:680px;margin:0 auto 16px}
+    .hero h1 em{color:var(--mint);font-style:normal}
+    .hero p{font-size:17px;color:rgba(255,255,255,.7);max-width:500px;margin:0 auto 32px;font-weight:300}
+    .btn-primary{display:inline-block;background:var(--mint);color:var(--teal);font-family:'Syne',sans-serif;font-weight:700;font-size:15px;padding:15px 36px;border-radius:12px;text-decoration:none;transition:all .2s;border:none;cursor:pointer}
+    .btn-primary:hover{background:var(--mint2);transform:translateY(-2px);box-shadow:0 10px 28px rgba(92,232,196,.35)}
+    .btn-outline{display:inline-block;background:transparent;color:var(--teal);font-family:'Syne',sans-serif;font-weight:700;font-size:14px;padding:13px 28px;border-radius:10px;text-decoration:none;border:1.5px solid var(--border);transition:all .2s;cursor:pointer}
+    .btn-outline:hover{background:var(--lt)}
+    .sec{padding:72px 24px}
+    .sec-label{font-size:11px;font-weight:600;color:var(--mid);text-transform:uppercase;letter-spacing:2px;text-align:center;margin-bottom:10px}
+    .sec-title{font-family:'Syne',sans-serif;font-weight:700;font-size:clamp(22px,3.5vw,34px);color:var(--teal);text-align:center;margin-bottom:8px}
+    .sec-sub{font-size:16px;color:var(--gray);text-align:center;margin-bottom:48px;font-weight:300}
+    .cta-strip{background:var(--teal);padding:64px 24px;text-align:center}
+    .cta-strip h2{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(22px,4vw,36px);color:#fff;margin-bottom:12px}
+    .cta-strip p{font-size:16px;color:rgba(255,255,255,.65);margin-bottom:28px;max-width:480px;margin-left:auto;margin-right:auto}
+    .cta-note{font-size:13px;color:rgba(255,255,255,.4);margin-top:12px;font-style:italic}
+    footer{background:var(--dark);padding:24px;text-align:center}
+    .foot-logo{font-family:'Syne',sans-serif;font-weight:800;font-size:15px;color:var(--mint);letter-spacing:1px;margin-bottom:6px}
+    .foot-text{font-size:12px;color:rgba(255,255,255,.35)}
+    .fade{opacity:0;transform:translateY(18px);transition:opacity .55s ease,transform .55s ease}
+    .fade.in{opacity:1;transform:none}
+  </style>
+<style>
+  .cat-tabs{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:40px}
+  .cat-tab{background:var(--white);border:1.5px solid var(--border);border-radius:100px;padding:8px 18px;font-size:13px;font-weight:500;color:var(--teal);cursor:pointer;transition:all .2s}
+  .cat-tab.active,.cat-tab:hover{background:var(--teal);color:var(--mint);border-color:var(--teal)}
+  .cat-section{display:none}.cat-section.active{display:block}
+  .prompt-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:20px}
+  .prompt-card{background:var(--white);border:1.5px solid var(--border);border-radius:16px;padding:24px;transition:all .2s;cursor:pointer;position:relative}
+  .prompt-card:hover{border-color:var(--mint2);box-shadow:0 8px 30px rgba(13,79,82,.08);transform:translateY(-2px)}
+  .prompt-num{font-family:'Syne',sans-serif;font-size:11px;font-weight:700;color:var(--mint2);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px}
+  .prompt-title{font-family:'Syne',sans-serif;font-size:16px;font-weight:700;color:var(--teal);margin-bottom:12px}
+  .prompt-text{font-size:13px;color:var(--gray);line-height:1.65;background:var(--lt);border-radius:8px;padding:12px 14px;border-left:3px solid var(--mint2);font-family:'DM Sans',sans-serif}
+  .copy-btn{position:absolute;top:16px;right:16px;background:var(--lt);border:none;border-radius:8px;padding:6px 12px;font-size:11px;font-weight:600;color:var(--teal);cursor:pointer;transition:all .2s}
+  .copy-btn:hover{background:var(--mint);color:var(--teal)}
+  .copy-btn.copied{background:var(--mint);color:var(--teal)}
+</style>
+</head>
+<body>
+<nav>
+  <a href="#" class="nav-logo">EAS Agency</a>
+  <a href="https://flutterwave.com/pay/zjmiajkwvf3q" target="_blank" rel="noopener" class="nav-cta">Join the Cohort →</a>
+</nav>
+
+<section class="hero">
+  <div class="hero-badge">Free Resource</div>
+  <h1>30 AI Prompts for <em>Digital Marketers</em></h1>
+  <p>Copy. Paste. Adapt. Repeat. Every prompt is built to produce real, usable output on the first or second try.</p>
+</section>
+
+<section class="sec" style="background:var(--white)">
+  <div class="wrap">
+    <div class="sec-label">5 Categories · 30 Prompts</div>
+    <h2 class="sec-title">Find Your Prompt. Use It Now.</h2>
+    <p class="sec-sub">Click any category. Click any card to copy the prompt.</p>
+
+    <div class="cat-tabs">
+      <button class="cat-tab active" onclick="switchCat(0)">✍️ Content Creation</button><button class="cat-tab" onclick="switchCat(1)">📣 Social Media & Ads</button><button class="cat-tab" onclick="switchCat(2)">📧 Email Marketing</button><button class="cat-tab" onclick="switchCat(3)">🔄 CRM & Automation</button><button class="cat-tab" onclick="switchCat(4)">📊 Analytics & Strategy</button>
+    </div>
+
+    
+    <div class="cat-section active" id="cat-0">
+      <div class="prompt-grid">
+        <div class="prompt-card" onclick="copyPrompt(this)">
+            <button class="copy-btn" onclick="event.stopPropagation();copyPrompt(this.closest('.prompt-card'))">Copy</button>
+            <div class="prompt-num">Prompt 1</div>
+            <div class="prompt-title">Caption Generator</div>
+            <div class="prompt-text">Write a punchy Instagram caption for [business type] targeting [audience]. Topic: [topic]. Tone: [adjectives]. End with a question to drive comments. Max 150 characters.</div>
+          </div><div class="prompt-card" onclick="copyPrompt(this)">
+            <button class="copy-btn" onclick="event.stopPropagation();copyPrompt(this.closest('.prompt-card'))">Copy</button>
+            <div class="prompt-num">Prompt 2</div>
+            <div class="prompt-title">Blog Post Outline</div>
+            <div class="prompt-text">Create a detailed blog post outline for [topic] targeting [audience]. Include: a hook introduction, 5 main sections with subpoints, a conclusion with CTA, and 3 SEO-friendly subheadings.</div>
+          </div><div class="prompt-card" onclick="copyPrompt(this)">
+            <button class="copy-btn" onclick="event.stopPropagation();copyPrompt(this.closest('.prompt-card'))">Copy</button>
+            <div class="prompt-num">Prompt 3</div>
+            <div class="prompt-title">LinkedIn Article Hook</div>
+            <div class="prompt-text">Write 5 alternative opening lines for a LinkedIn article about [topic]. Each should challenge a common assumption, be under 20 words, and make a professional stop scrolling.</div>
+          </div><div class="prompt-card" onclick="copyPrompt(this)">
+            <button class="copy-btn" onclick="event.stopPropagation();copyPrompt(this.closest('.prompt-card'))">Copy</button>
+            <div class="prompt-num">Prompt 4</div>
+            <div class="prompt-title">60-Second Reel Script</div>
+            <div class="prompt-text">Write a 60-second Reel script for [role] about [topic]. Structure: hook (3 sec), problem (10 sec), 3 key points (30 sec), CTA (10 sec). Conversational tone. First person.</div>
+          </div><div class="prompt-card" onclick="copyPrompt(this)">
+            <button class="copy-btn" onclick="event.stopPropagation();copyPrompt(this.closest('.prompt-card'))">Copy</button>
+            <div class="prompt-num">Prompt 5</div>
+            <div class="prompt-title">Content Repurposer</div>
+            <div class="prompt-text">Repurpose this content into: a 150-word LinkedIn post, 3 Instagram captions (different angles), a 60-sec Reel script, an email subject line + 80-word intro, and 2 Twitter posts. Content: [paste here]</div>
+          </div><div class="prompt-card" onclick="copyPrompt(this)">
+            <button class="copy-btn" onclick="event.stopPropagation();copyPrompt(this.closest('.prompt-card'))">Copy</button>
+            <div class="prompt-num">Prompt 6</div>
+            <div class="prompt-title">Brand Voice Guide Builder</div>
+            <div class="prompt-text">I run [business]. My audience is [description]. Write my brand voice guide including: 5 tone adjectives, 5 anti-tone adjectives, 3 language patterns I use, 5 phrases I never say, and 3 example sentences.</div>
+          </div>
+      </div>
+    </div>
+    <div class="cat-section" id="cat-1">
+      <div class="prompt-grid">
+        <div class="prompt-card" onclick="copyPrompt(this)">
+            <button class="copy-btn" onclick="event.stopPropagation();copyPrompt(this.closest('.prompt-card'))">Copy</button>
+            <div class="prompt-num">Prompt 7</div>
+            <div class="prompt-title">Hook Bank Generator</div>
+            <div class="prompt-text">Generate 10 social media hooks for each category: (1) Contrarian, (2) Curiosity gap, (3) Specific result, (4) Personal story, (5) Direct instruction. Niche: [your industry]. Use [brackets] for variables.</div>
+          </div><div class="prompt-card" onclick="copyPrompt(this)">
+            <button class="copy-btn" onclick="event.stopPropagation();copyPrompt(this.closest('.prompt-card'))">Copy</button>
+            <div class="prompt-num">Prompt 8</div>
+            <div class="prompt-title">Tiered Hashtag Strategy</div>
+            <div class="prompt-text">Generate a tiered hashtag strategy for [platform] for a [niche] account targeting [audience]. Include 3 high-volume (1M+ posts), 5 mid-volume (100k–500k), and 7 niche (under 50k) hashtags.</div>
+          </div><div class="prompt-card" onclick="copyPrompt(this)">
+            <button class="copy-btn" onclick="event.stopPropagation();copyPrompt(this.closest('.prompt-card'))">Copy</button>
+            <div class="prompt-num">Prompt 9</div>
+            <div class="prompt-title">Meta Ad Copy (3 variations)</div>
+            <div class="prompt-text">Write a Facebook feed ad for [business] targeting [audience]. Offer: [describe]. Format: hook, problem, solution bridge, social proof, CTA. Write 3 variations with different hooks: contrarian, result, story.</div>
+          </div><div class="prompt-card" onclick="copyPrompt(this)">
+            <button class="copy-btn" onclick="event.stopPropagation();copyPrompt(this.closest('.prompt-card'))">Copy</button>
+            <div class="prompt-num">Prompt 10</div>
+            <div class="prompt-title">Google Responsive Search Ad</div>
+            <div class="prompt-text">Write a Google responsive search ad for [service] targeting [search intent]. Generate 10 headline options (max 30 chars each) and 4 description options (max 90 chars each). Match intent in Headline 1.</div>
+          </div><div class="prompt-card" onclick="copyPrompt(this)">
+            <button class="copy-btn" onclick="event.stopPropagation();copyPrompt(this.closest('.prompt-card'))">Copy</button>
+            <div class="prompt-num">Prompt 11</div>
+            <div class="prompt-title">Underperforming Ad Rescue</div>
+            <div class="prompt-text">This ad has a CTR of [X]%, below my [Y]% benchmark. Current hook: [paste hook]. Rewrite it 5 ways — contrarian, curiosity gap, specific result, story, and direct instruction formats.</div>
+          </div><div class="prompt-card" onclick="copyPrompt(this)">
+            <button class="copy-btn" onclick="event.stopPropagation();copyPrompt(this.closest('.prompt-card'))">Copy</button>
+            <div class="prompt-num">Prompt 12</div>
+            <div class="prompt-title">Comment Reply Generator</div>
+            <div class="prompt-text">Write a warm, genuine reply to this comment on my [topic] post. Tone: [adjectives]. Under 30 words. Conversational, not corporate. Comment: [paste comment]</div>
+          </div>
+      </div>
+    </div>
+    <div class="cat-section" id="cat-2">
+      <div class="prompt-grid">
+        <div class="prompt-card" onclick="copyPrompt(this)">
+            <button class="copy-btn" onclick="event.stopPropagation();copyPrompt(this.closest('.prompt-card'))">Copy</button>
+            <div class="prompt-num">Prompt 13</div>
+            <div class="prompt-title">Welcome Email (Email 1)</div>
+            <div class="prompt-text">Write Email 1 of a welcome sequence for [business] targeting [audience]. Lead magnet: [what they downloaded]. Brand voice: [adjectives]. Subject line + preview text + body under 200 words. CTA: reply and tell me [question].</div>
+          </div><div class="prompt-card" onclick="copyPrompt(this)">
+            <button class="copy-btn" onclick="event.stopPropagation();copyPrompt(this.closest('.prompt-card'))">Copy</button>
+            <div class="prompt-num">Prompt 14</div>
+            <div class="prompt-title">10 Subject Line Options</div>
+            <div class="prompt-text">Generate 10 email subject line options for an email about [topic] targeting [audience]. Include: 2 number-based, 2 question-based, 2 curiosity gap, 2 bold claims, 2 personal story hooks. Write preview text for the 3 strongest.</div>
+          </div><div class="prompt-card" onclick="copyPrompt(this)">
+            <button class="copy-btn" onclick="event.stopPropagation();copyPrompt(this.closest('.prompt-card'))">Copy</button>
+            <div class="prompt-num">Prompt 15</div>
+            <div class="prompt-title">Nurture Email</div>
+            <div class="prompt-text">Write a nurture email for [business]. This is Email [number] in a sequence. Goal: [share insight / social proof / handle objection]. Brand voice: [adjectives]. Subject line + preview text + body under 200 words.</div>
+          </div><div class="prompt-card" onclick="copyPrompt(this)">
+            <button class="copy-btn" onclick="event.stopPropagation();copyPrompt(this.closest('.prompt-card'))">Copy</button>
+            <div class="prompt-num">Prompt 16</div>
+            <div class="prompt-title">Re-engagement Campaign</div>
+            <div class="prompt-text">Write a 3-email re-engagement sequence for subscribers inactive 60–90 days. Email 1: high-value content. Email 2 (3 days later): ask what they struggle with. Email 3 (3 days later): stay or leave gracefully. Each under 150 words.</div>
+          </div><div class="prompt-card" onclick="copyPrompt(this)">
+            <button class="copy-btn" onclick="event.stopPropagation();copyPrompt(this.closest('.prompt-card'))">Copy</button>
+            <div class="prompt-num">Prompt 17</div>
+            <div class="prompt-title">Analytics Interpreter</div>
+            <div class="prompt-text">Here are my email stats from the last 30 days: [paste data]. Tell me in plain English: which subject line formulas perform best, best send days and times, what drives most clicks, and give 3 specific action recommendations.</div>
+          </div><div class="prompt-card" onclick="copyPrompt(this)">
+            <button class="copy-btn" onclick="event.stopPropagation();copyPrompt(this.closest('.prompt-card'))">Copy</button>
+            <div class="prompt-num">Prompt 18</div>
+            <div class="prompt-title">Sales Email</div>
+            <div class="prompt-text">Write a confident sales email for [offer] targeting [audience]. Include: a subject line with urgency but no hype, an opening that references a specific pain, the offer in 3 bullet points, one objection handled, and a direct CTA.</div>
+          </div>
+      </div>
+    </div>
+    <div class="cat-section" id="cat-3">
+      <div class="prompt-grid">
+        <div class="prompt-card" onclick="copyPrompt(this)">
+            <button class="copy-btn" onclick="event.stopPropagation();copyPrompt(this.closest('.prompt-card'))">Copy</button>
+            <div class="prompt-num">Prompt 19</div>
+            <div class="prompt-title">48-Hour Follow-Up</div>
+            <div class="prompt-text">Write a brief, warm follow-up message for a potential client who enquired about [service] but has not responded in 48 hours. Tone: helpful and low-pressure. Under 80 words. End with an easy yes/no question.</div>
+          </div><div class="prompt-card" onclick="copyPrompt(this)">
+            <button class="copy-btn" onclick="event.stopPropagation();copyPrompt(this.closest('.prompt-card'))">Copy</button>
+            <div class="prompt-num">Prompt 20</div>
+            <div class="prompt-title">Proposal Chase (5 Days)</div>
+            <div class="prompt-text">Write a follow-up email for a client who received a proposal 5 days ago with no response. Acknowledge they are busy. Offer to answer questions or adjust anything. Tone: confident and warm. Under 60 words.</div>
+          </div><div class="prompt-card" onclick="copyPrompt(this)">
+            <button class="copy-btn" onclick="event.stopPropagation();copyPrompt(this.closest('.prompt-card'))">Copy</button>
+            <div class="prompt-num">Prompt 21</div>
+            <div class="prompt-title">Client Onboarding Email</div>
+            <div class="prompt-text">Write a client onboarding email for [service]. Client: [name]. Include: a warm welcome, what happens in the first week, what they need to send, a link to book their onboarding call, and a reassuring close.</div>
+          </div><div class="prompt-card" onclick="copyPrompt(this)">
+            <button class="copy-btn" onclick="event.stopPropagation();copyPrompt(this.closest('.prompt-card'))">Copy</button>
+            <div class="prompt-num">Prompt 22</div>
+            <div class="prompt-title">DM Template Polish</div>
+            <div class="prompt-text">Make this DM response sound more like a real conversation and less like a template. Keep all the key information. Tone: warm and professional. DM: [paste your template]</div>
+          </div><div class="prompt-card" onclick="copyPrompt(this)">
+            <button class="copy-btn" onclick="event.stopPropagation();copyPrompt(this.closest('.prompt-card'))">Copy</button>
+            <div class="prompt-num">Prompt 23</div>
+            <div class="prompt-title">Zapier Workflow Builder</div>
+            <div class="prompt-text">Describe step-by-step how to build this Zapier workflow: when [trigger event] happens in [app], automatically [action 1] in [app 2] and [action 2] in [app 3]. Include which trigger and action to select in each app.</div>
+          </div><div class="prompt-card" onclick="copyPrompt(this)">
+            <button class="copy-btn" onclick="event.stopPropagation();copyPrompt(this.closest('.prompt-card'))">Copy</button>
+            <div class="prompt-num">Prompt 24</div>
+            <div class="prompt-title">Community Discussion Prompts</div>
+            <div class="prompt-text">Write 5 discussion questions for a [community type] focused on [topic]. Open-ended, easy to answer quickly, relevant to [audience challenge]. Mix: 2 opinion-based, 2 experience-based, 1 prediction-based.</div>
+          </div>
+      </div>
+    </div>
+    <div class="cat-section" id="cat-4">
+      <div class="prompt-grid">
+        <div class="prompt-card" onclick="copyPrompt(this)">
+            <button class="copy-btn" onclick="event.stopPropagation();copyPrompt(this.closest('.prompt-card'))">Copy</button>
+            <div class="prompt-num">Prompt 25</div>
+            <div class="prompt-title">Full Campaign Audit</div>
+            <div class="prompt-text">You are a senior paid media strategist. Here is 30 days of campaign data: [paste data]. Audit: (1) budget efficiency, (2) creative performance, (3) audience performance, (4) funnel drop-off, (5) top 3 priority actions ranked by impact. Be direct.</div>
+          </div><div class="prompt-card" onclick="copyPrompt(this)">
+            <button class="copy-btn" onclick="event.stopPropagation();copyPrompt(this.closest('.prompt-card'))">Copy</button>
+            <div class="prompt-num">Prompt 26</div>
+            <div class="prompt-title">Audience Profile Generator</div>
+            <div class="prompt-text">Generate a psychographic profile of my ideal client: [describe in 2–3 sentences]. Include: top 3 fears, top 3 desires, language they use, content they consume, objections before buying, and search terms they use.</div>
+          </div><div class="prompt-card" onclick="copyPrompt(this)">
+            <button class="copy-btn" onclick="event.stopPropagation();copyPrompt(this.closest('.prompt-card'))">Copy</button>
+            <div class="prompt-num">Prompt 27</div>
+            <div class="prompt-title">Weekly Marketing Report</div>
+            <div class="prompt-text">Write a professional weekly marketing report for [business]. Data: [paste stats]. Sections: (1) Performance highlights, (2) Areas of concern, (3) Key insight, (4) Recommended action. Each section 2–3 sentences.</div>
+          </div><div class="prompt-card" onclick="copyPrompt(this)">
+            <button class="copy-btn" onclick="event.stopPropagation();copyPrompt(this.closest('.prompt-card'))">Copy</button>
+            <div class="prompt-num">Prompt 28</div>
+            <div class="prompt-title">A/B Test Hypothesis</div>
+            <div class="prompt-text">Write a one-paragraph A/B test hypothesis for: We are testing [element] for [campaign] targeting [audience]. Control: [describe]. Variation: [describe]. Expected outcome: [prediction] because [reasoning]. Success = [metric improvement].</div>
+          </div><div class="prompt-card" onclick="copyPrompt(this)">
+            <button class="copy-btn" onclick="event.stopPropagation();copyPrompt(this.closest('.prompt-card'))">Copy</button>
+            <div class="prompt-num">Prompt 29</div>
+            <div class="prompt-title">SOP Generator</div>
+            <div class="prompt-text">Write a Standard Operating Procedure for: [describe process]. Format: process name, trigger, owner, tools used per step, numbered instructions, expected output, and troubleshooting for the 3 most common problems.</div>
+          </div><div class="prompt-card" onclick="copyPrompt(this)">
+            <button class="copy-btn" onclick="event.stopPropagation();copyPrompt(this.closest('.prompt-card'))">Copy</button>
+            <div class="prompt-num">Prompt 30</div>
+            <div class="prompt-title">90-Day Growth Roadmap</div>
+            <div class="prompt-text">Create a 90-day AI marketing roadmap for [business]. Days 1–30: consistency and habits. Days 31–60: one optimisation and one new layer. Days 61–90: scale what is working. For each phase: 3 weekly actions, metric to track, and decision trigger.</div>
+          </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="background:var(--off)">
+  <div class="wrap">
+    <div class="sec-label">How to use these prompts</div>
+    <h2 class="sec-title">5 Rules That Change Everything</h2>
+    <p class="sec-sub">The prompt is only 20% of the result. Here is the other 80%.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px">
+      <div style="background:var(--white);border:1.5px solid var(--border);border-radius:14px;padding:22px">
+        <div style="font-family:'Syne',sans-serif;font-size:14px;font-weight:700;color:var(--teal);margin-bottom:8px">Replace every [bracket]</div>
+        <div style="font-size:13px;color:var(--gray);line-height:1.6">Fill placeholders with real business details before sending. The more specific, the better the output.</div>
+      </div><div style="background:var(--white);border:1.5px solid var(--border);border-radius:14px;padding:22px">
+        <div style="font-family:'Syne',sans-serif;font-size:14px;font-weight:700;color:var(--teal);margin-bottom:8px">Paste your brand voice guide first</div>
+        <div style="font-size:13px;color:var(--gray);line-height:1.6">Before any writing task, paste your brand voice guide at the top of the chat. One habit, massive improvement.</div>
+      </div><div style="background:var(--white);border:1.5px solid var(--border);border-radius:14px;padding:22px">
+        <div style="font-family:'Syne',sans-serif;font-size:14px;font-weight:700;color:var(--teal);margin-bottom:8px">Iterate — never accept draft one</div>
+        <div style="font-size:13px;color:var(--gray);line-height:1.6">After the first output, send follow-up prompts: 'Make it more direct.' 'Cut by 30%.' '5 alternative hooks.' The skill is in the iteration.</div>
+      </div><div style="background:var(--white);border:1.5px solid var(--border);border-radius:14px;padding:22px">
+        <div style="font-family:'Syne',sans-serif;font-size:14px;font-weight:700;color:var(--teal);margin-bottom:8px">Try both ChatGPT and Claude</div>
+        <div style="font-size:13px;color:var(--gray);line-height:1.6">Same prompt, different output. ChatGPT is faster for ideation. Claude is stronger for nuance and tone. Use both.</div>
+      </div><div style="background:var(--white);border:1.5px solid var(--border);border-radius:14px;padding:22px">
+        <div style="font-family:'Syne',sans-serif;font-size:14px;font-weight:700;color:var(--teal);margin-bottom:8px">Save your winning prompts</div>
+        <div style="font-size:13px;color:var(--gray);line-height:1.6">When a prompt produces something you would actually use — save it. After 30 days you have a personal prompt library.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-strip" id="cta">
+  <h2>Want to go 10× deeper?</h2>
+  <p>The cohort builds your full AI Marketing OS — content, scheduling, email, CRM, and ads — in 6 live weeks.</p>
+  <a href="https://https://emmieautomate.com/sales" class="btn-primary" style="display:inline-block">Join the Cohort from $37</a>
+  <div class="cta-note">One-time payment · Lifetime access · 7-day money-back guarantee</div>
+</section>
+
+<footer>
+  <div class="foot-logo">EAS Agency</div>
+  <div class="foot-text">© 2025 EAS Agency · Free Resource · AI & Automation for Digital Marketing</div>
+</footer>
+
+<script>
+function switchCat(i) {
+  document.querySelectorAll('.cat-tab').forEach((t,ti)=>t.classList.toggle('active',ti===i));
+  document.querySelectorAll('.cat-section').forEach((s,si)=>s.classList.toggle('active',si===i));
+}
+function copyPrompt(card) {
+  const text = card.querySelector('.prompt-text').textContent;
+  navigator.clipboard.writeText(text).then(()=>{
+    const btn = card.querySelector('.copy-btn');
+    btn.textContent='Copied!'; btn.classList.add('copied');
+    setTimeout(()=>{ btn.textContent='Copy'; btn.classList.remove('copied'); },2000);
+  });
+}
+const obs=new IntersectionObserver(e=>e.forEach(el=>{if(el.isIntersecting)el.target.classList.add('in')}),{threshold:.08});
+document.querySelectorAll('.fade').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
