@@ -1,776 +1,858 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI Automation & Digital Marketing Agency | EAS Agency — Emmanuel Aderemi</title>
-<meta name="description" content="Looking for an AI automation agency or growth strategy consultant? EAS Agency by Emmanuel Aderemi combines AI-powered marketing with proven strategies to drive real results worldwide.">
-<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-<meta name="keywords" content="AI automation agency, digital marketing agency, growth strategy consultant, freelance marketing expert, AI-powered marketing, marketing automation, Emmanuel Aderemi">
-<meta name="author" content="Emmanuel Aderemi">
-<link rel="canonical" href="https://emmieautomate.com/">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://emmieautomate.com/">
-<meta property="og:title" content="EAS Agency | AI-Powered Growth Strategy & Digital Marketing">
-<meta property="og:description" content="AI-powered growth strategy and digital marketing agency. We combine automation, data-driven strategy, and creative execution to scale your business.">
-<meta property="og:image" content="https://res.cloudinary.com/ds8zdlhmt/image/upload/v1773405442/EAS_Agency_kqhwev.png">
-<meta property="og:site_name" content="EAS Agency">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="EAS Agency | AI-Powered Growth Strategy & Digital Marketing">
-<meta name="twitter:description" content="AI automation agency & growth strategy consultant. Founded by Emmanuel Aderemi (Emmie). Let's scale your business.">
-<meta name="twitter:image" content="https://res.cloudinary.com/ds8zdlhmt/image/upload/v1773405442/EAS_Agency_kqhwev.png">
-<meta name="twitter:creator" content="@emmieautomate">
-<link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
-<script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Epilogue:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
-<style>
-:root {
-  --dt: #0D4F52;
-  --mt: #146E6E;
-  --mint: #5CE8C4;
-  --ml: #E8FAF6;
-  --white: #FFFFFF;
-  --off: #F7FAFA;
-  --body: #3A3A3A;
-  --muted: #7A8A8A;
-  --border: rgba(13,79,82,0.12);
-  --black: #0A0A0A;
-}
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; font-size: 16px; }
-body { font-family: 'Epilogue', sans-serif; color: var(--body); background: var(--white); overflow-x: hidden; cursor: none; }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Automation & Digital Marketing Agency | EAS Agency — Emmanuel Aderemi</title>
+    <meta name="description" content="EAS Agency by Emmanuel Aderemi combines AI-powered marketing with proven strategies to drive real results worldwide.">
+    <link rel="canonical" href="https://emmieautomate.com/">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Epilogue:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+    
+    <!-- Calendar API -->
+    <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
+    <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
 
-.cursor { position: fixed; width: 10px; height: 10px; background: var(--mint); border-radius: 50%; pointer-events: none; z-index: 9999; transition: transform 0.15s ease; transform: translate(-50%,-50%); }
-.cursor-ring { position: fixed; width: 36px; height: 36px; border: 1.5px solid var(--mint); border-radius: 50%; pointer-events: none; z-index: 9998; opacity: 0.5; transition: all 0.25s ease; transform: translate(-50%,-50%); }
+    <style>
+        :root {
+            --dt: #0D4F52;
+            --mt: #146E6E;
+            --mint: #5CE8C4;
+            --ml: #E8FAF6;
+            --white: #FFFFFF;
+            --off: #F7FAFA;
+            --body: #3A3A3A;
+            --muted: #7A8A8A;
+            --border: rgba(13,79,82,0.12);
+            --black: #0A0A0A;
+            --nav-height: 80px;
+        }
 
-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 14px 60px; background: rgba(255,255,255,0.92); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); transition: all 0.3s; }
-nav.scrolled { padding: 10px 60px; }
-.nav-logo { display:flex; align-items:center; text-decoration:none; font-family: 'Syne', sans-serif; font-weight: 800; font-size: 20px; color: var(--dt); letter-spacing: -0.5px; }
-.nav-logo img { transition: filter 0.3s; }
-nav.scrolled .nav-logo img, nav.dark .nav-logo img { filter: brightness(0) invert(1); }
-.nav-links { display: flex; align-items: center; gap: 36px; list-style: none; }
-.nav-links a { font-size: 13px; font-weight: 500; color: var(--muted); text-decoration: none; letter-spacing: 0.3px; transition: color 0.2s; position: relative; }
-.nav-links a::after { content: ''; position: absolute; bottom: -3px; left: 0; width: 0; height: 2px; background: var(--mint); transition: width 0.25s ease; }
-.nav-links a:hover { color: var(--dt); }
-.nav-links a:hover::after { width: 100%; }
-.nav-cta { background: var(--dt) !important; color: var(--white) !important; padding: 10px 22px; border-radius: 100px; }
-.nav-cta:hover { background: var(--mt) !important; }
-.nav-cta::after { display: none !important; }
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        html { scroll-behavior: smooth; font-size: 16px; overflow-x: hidden; }
+        body { 
+            font-family: 'Epilogue', sans-serif; 
+            color: var(--body); 
+            background: var(--white); 
+            overflow-x: hidden; 
+            line-height: 1.6;
+        }
 
-/* HERO */
-#hero { display: grid; grid-template-columns: 1fr 1fr; min-height: 100vh; padding-top: 80px; }
-.hero-left { background: var(--dt); padding: 0; display: flex; flex-direction: column; justify-content: flex-end; align-items: flex-start; position: relative; overflow: hidden; }
-.hero-left::before { content: ''; position: absolute; width: 400px; height: 400px; border-radius: 50%; border: 1px solid rgba(92,232,196,0.1); top: -100px; left: -100px; z-index: 1; }
-.hero-photo-placeholder { width: 100%; height: 100%; min-height: calc(100vh - 80px); border-radius: 0; background: transparent; border: none; display: block; position: relative; z-index: 2; overflow: hidden; }
-.photo-hint { font-size: 13px; color: rgba(92,232,196,0.5); font-weight: 400; text-align: center; line-height: 1.5; }
-.hero-right { background: var(--white); padding: 80px 70px; display: flex; flex-direction: column; justify-content: center; }
-.hero-tag { display: inline-block; background: var(--ml); color: var(--mt); border: 1px solid rgba(92,232,196,0.4); font-size: 11px; letter-spacing: 2px; text-transform: uppercase; padding: 7px 16px; border-radius: 100px; font-weight: 600; margin-bottom: 20px; animation: fadeUp 0.8s ease both; }
-.hero-greeting { font-size: 15px; color: var(--muted); margin-bottom: 6px; animation: fadeUp 0.6s ease 0.1s both; }
-.hero-name { font-family: 'Syne', sans-serif; font-weight: 800; font-size: clamp(52px, 6.5vw, 78px); line-height: 0.94; letter-spacing: -3px; color: var(--black); animation: fadeUp 0.7s ease 0.2s both; }
-.hero-name .accent { color: var(--dt); display: block; }
-.hero-title { font-size: 15px; font-weight: 500; color: var(--mt); margin: 22px 0 26px; animation: fadeUp 0.7s ease 0.35s both; }
-.hero-desc { font-size: 15px; line-height: 1.8; color: var(--body); font-weight: 300; max-width: 400px; margin-bottom: 38px; animation: fadeUp 0.7s ease 0.45s both; }
-.hero-btns { display: flex; gap: 14px; flex-wrap: wrap; animation: fadeUp 0.7s ease 0.55s both; }
-.btn-primary { background: var(--dt); color: var(--white); padding: 14px 30px; border-radius: 100px; font-size: 14px; font-weight: 500; text-decoration: none; transition: all 0.25s; display: inline-flex; align-items: center; gap: 8px; }
-.btn-primary:hover { background: var(--mt); transform: translateY(-2px); box-shadow: 0 12px 32px rgba(13,79,82,0.2); }
-.btn-outline { background: transparent; color: var(--dt); padding: 14px 30px; border-radius: 100px; font-size: 14px; font-weight: 500; text-decoration: none; border: 1.5px solid var(--dt); transition: all 0.25s; }
-.btn-outline:hover { background: var(--dt); color: var(--white); transform: translateY(-2px); }
-.hero-stats { display: flex; gap: 32px; margin-top: 50px; padding-top: 32px; border-top: 1px solid var(--border); animation: fadeUp 0.7s ease 0.65s both; }
-.stat-num { font-family: 'Syne', sans-serif; font-size: 30px; font-weight: 800; color: var(--dt); letter-spacing: -1px; line-height: 1; }
-.stat-num span { color: var(--mint); }
-.stat-label { font-size: 12px; color: var(--muted); margin-top: 4px; }
+        /* Custom Cursor - Hidden on Mobile */
+        .cursor { position: fixed; width: 10px; height: 10px; background: var(--mint); border-radius: 50%; pointer-events: none; z-index: 9999; transition: transform 0.15s ease; transform: translate(-50%,-50%); display: none; }
+        .cursor-ring { position: fixed; width: 36px; height: 36px; border: 1.5px solid var(--mint); border-radius: 50%; pointer-events: none; z-index: 9998; opacity: 0.5; transition: all 0.25s ease; transform: translate(-50%,-50%); display: none; }
+        
+        @media (min-width: 1024px) {
+            body { cursor: none; }
+            .cursor, .cursor-ring { display: block; }
+        }
 
-/* INTRO */
-#intro { background: var(--dt); padding: 120px 60px; min-height: 100vh; display: flex; align-items: center; }
-.intro-inner { max-width: 1200px; margin: 0 auto; width: 100%; }
-.section-eyebrow { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
-.eyebrow-line { width: 40px; height: 2px; background: var(--mint); border-radius: 2px; }
-.eyebrow-text { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--mint); font-weight: 600; }
-.eyebrow-text.dark { color: var(--mt); }
-.intro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
-.intro-headline { font-family: 'Syne', sans-serif; font-size: clamp(34px, 3.8vw, 50px); font-weight: 800; color: var(--white); line-height: 1.08; letter-spacing: -2px; margin-bottom: 24px; }
-.intro-headline em { font-style: normal; color: var(--mint); }
-.intro-body { font-size: 15px; line-height: 1.85; color: rgba(255,255,255,0.6); font-weight: 300; margin-bottom: 20px; }
-.skills-label { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: rgba(92,232,196,0.6); font-weight: 600; margin-bottom: 14px; }
-.skills-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 36px; }
-.skill-tag { background: rgba(92,232,196,0.08); border: 1px solid rgba(92,232,196,0.18); color: var(--mint); font-size: 13px; padding: 8px 18px; border-radius: 100px; font-weight: 400; transition: all 0.2s; }
-.skill-tag:hover { background: rgba(92,232,196,0.18); }
-.intro-stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-.istat { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.07); border-radius: 14px; padding: 24px; transition: all 0.25s; }
-.istat:hover { background: rgba(92,232,196,0.07); border-color: rgba(92,232,196,0.18); }
-.istat-num { font-family: 'Syne', sans-serif; font-size: 38px; font-weight: 800; color: var(--mint); letter-spacing: -2px; line-height: 1; margin-bottom: 6px; }
-.istat-label { font-size: 13px; color: rgba(255,255,255,0.45); line-height: 1.4; }
+        /* NAV */
+        nav { 
+            position: fixed; top: 0; left: 0; right: 0; z-index: 1000; 
+            display: flex; align-items: center; justify-content: space-between; 
+            padding: 20px 5%; 
+            background: rgba(255,255,255,0.8); 
+            backdrop-filter: blur(15px); 
+            border-bottom: 1px solid var(--border); 
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        nav.scrolled { padding: 12px 5%; background: rgba(255,255,255,0.95); }
 
-/* SERVICES */
-#services { background: var(--off); padding: 120px 60px; min-height: 100vh; }
-.section-header { max-width: 1200px; margin: 0 auto 56px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: end; }
-.section-title { font-family: 'Syne', sans-serif; font-size: clamp(34px, 3.8vw, 50px); font-weight: 800; color: var(--dt); letter-spacing: -2px; line-height: 1.05; }
-.section-title em { font-style: normal; color: var(--mint); }
-.section-desc { font-size: 15px; line-height: 1.8; color: var(--muted); font-weight: 300; padding-top: 8px; }
-.services-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-.service-card { background: var(--white); border: 1px solid var(--border); border-radius: 20px; padding: 36px 30px; transition: all 0.3s ease; position: relative; overflow: hidden; }
-.service-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--mint); transform: scaleX(0); transform-origin: left; transition: transform 0.3s ease; }
-.service-card:hover { transform: translateY(-6px); box-shadow: 0 24px 48px rgba(13,79,82,0.1); border-color: rgba(92,232,196,0.35); }
-.service-card:hover::before { transform: scaleX(1); }
-.service-icon { width: 52px; height: 52px; background: var(--ml); border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 22px; transition: all 0.3s; }
-.service-name { font-family: 'Syne', sans-serif; font-size: 18px; font-weight: 700; color: var(--dt); letter-spacing: -0.5px; margin-bottom: 12px; }
-.service-desc { font-size: 13.5px; line-height: 1.75; color: var(--muted); font-weight: 300; margin-bottom: 18px; }
-.service-tools { display: flex; flex-wrap: wrap; gap: 6px; }
-.tool-tag { font-size: 11px; background: var(--ml); color: var(--mt); padding: 4px 10px; border-radius: 100px; font-weight: 500; }
+        .nav-logo img { height: 45px; width: auto; transition: transform 0.3s ease; }
+        .nav-logo:hover img { transform: scale(1.05); }
 
-/* EDUCATION */
-#education { background: var(--white); padding: 120px 60px; min-height: 100vh; }
-.edu-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1.4fr; gap: 80px; align-items: start; }
-.edu-tagline { font-size: 15px; line-height: 1.8; color: var(--muted); font-weight: 300; margin-bottom: 32px; }
-.edu-highlight { background: var(--dt); border-radius: 16px; padding: 28px; }
-.edu-hl-label { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--mint); font-weight: 600; margin-bottom: 10px; }
-.edu-hl-text { font-family: 'Syne', sans-serif; font-size: 20px; font-weight: 700; color: var(--white); letter-spacing: -0.5px; line-height: 1.3; margin-bottom: 6px; }
-.edu-hl-sub { font-size: 13px; color: rgba(255,255,255,0.45); }
-.timeline { display: flex; flex-direction: column; position: relative; padding-top: 4px; }
-.timeline::before { content: ''; position: absolute; left: 19px; top: 0; bottom: 0; width: 2px; background: var(--border); }
-.tl-item { display: flex; gap: 22px; position: relative; padding-bottom: 28px; }
-.tl-item:last-child { padding-bottom: 0; }
-.tl-dot { width: 40px; height: 40px; border-radius: 50%; background: var(--dt); border: 3px solid var(--mint); display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0; position: relative; z-index: 2; transition: all 0.3s; }
-.tl-item:hover .tl-dot { transform: scale(1.1); }
-.tl-content { background: var(--off); border: 1px solid var(--border); border-radius: 14px; padding: 20px 22px; flex: 1; transition: all 0.3s; }
-.tl-item:hover .tl-content { border-color: rgba(92,232,196,0.35); background: var(--ml); }
-.tl-date { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--mint); font-weight: 600; margin-bottom: 5px; }
-.tl-title { font-family: 'Syne', sans-serif; font-size: 15px; font-weight: 700; color: var(--dt); letter-spacing: -0.3px; margin-bottom: 4px; }
-.tl-sub { font-size: 13px; color: var(--muted); line-height: 1.55; }
-.tl-badge { display: inline-block; margin-top: 10px; font-size: 11px; background: var(--dt); color: var(--mint); padding: 4px 12px; border-radius: 100px; font-weight: 500; }
+        .nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
+        .nav-links a { 
+            font-size: 14px; font-weight: 500; color: var(--dt); 
+            text-decoration: none; position: relative; transition: color 0.3s;
+        }
+        .nav-links a::after { 
+            content: ''; position: absolute; bottom: -4px; left: 0; 
+            width: 0; height: 2px; background: var(--mint); transition: width 0.3s; 
+        }
+        .nav-links a:hover::after { width: 100%; }
 
-/* TOOLS */
-#tools { background: var(--black); padding: 120px 60px; min-height: 100vh; position: relative; overflow: hidden; }
-.tools-inner { max-width: 1200px; margin: 0 auto; }
-.tools-title { font-family: 'Syne', sans-serif; font-size: clamp(34px, 3.8vw, 50px); font-weight: 800; color: var(--white); letter-spacing: -2px; line-height: 1.05; margin-bottom: 16px; }
-.tools-title em { color: var(--mint); font-style: normal; }
-.tools-sub { font-size: 15px; color: rgba(255,255,255,0.38); font-weight: 300; max-width: 480px; line-height: 1.7; }
-.tools-categories { display: flex; flex-direction: column; gap: 44px; margin-top: 60px; }
-.tool-cat-label { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--mint); font-weight: 600; margin-bottom: 14px; display: flex; align-items: center; gap: 12px; }
-.tool-cat-label::after { content: ''; flex: 1; height: 1px; background: rgba(92,232,196,0.12); }
-.tools-pills { display: flex; flex-wrap: wrap; gap: 10px; }
-.tool-pill { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.09); color: rgba(255,255,255,0.7); font-size: 14px; padding: 10px 22px; border-radius: 100px; font-weight: 400; transition: all 0.25s; cursor: default; }
-.tool-pill:hover { background: rgba(92,232,196,0.09); border-color: rgba(92,232,196,0.35); color: var(--mint); transform: translateY(-2px); }
-.tool-pill.featured { background: rgba(92,232,196,0.09); border-color: rgba(92,232,196,0.28); color: var(--mint); }
+        /* Mobile Menu Toggle */
+        .menu-toggle { display: none; cursor: pointer; flex-direction: column; gap: 6px; z-index: 1001; }
+        .menu-toggle span { width: 28px; height: 2px; background: var(--dt); transition: 0.3s; border-radius: 2px; }
 
-/* FAQ */
-#faq { background: var(--ml); padding: 120px 60px; min-height: 100vh; }
-.faq-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1.5fr; gap: 80px; align-items: start; }
-.faq-sub { font-size: 15px; color: var(--muted); line-height: 1.8; font-weight: 300; margin-bottom: 36px; }
-.faq-contact-box { background: var(--dt); border-radius: 20px; padding: 30px; }
-.faq-contact-label { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--mint); font-weight: 600; margin-bottom: 10px; }
-.faq-contact-text { font-size: 14px; color: rgba(255,255,255,0.6); line-height: 1.7; font-weight: 300; margin-bottom: 18px; }
-.faq-list { display: flex; flex-direction: column; gap: 10px; }
-.faq-item { background: var(--white); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; transition: all 0.3s; }
-.faq-item:hover { border-color: rgba(92,232,196,0.4); }
-.faq-q { padding: 20px 26px; display: flex; align-items: center; justify-content: space-between; cursor: pointer; gap: 16px; user-select: none; }
-.faq-q-text { font-family: 'Syne', sans-serif; font-size: 15px; font-weight: 700; color: var(--dt); letter-spacing: -0.3px; line-height: 1.3; }
-.faq-toggle { width: 28px; height: 28px; border-radius: 50%; background: var(--ml); border: 1.5px solid rgba(92,232,196,0.35); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 18px; color: var(--dt); font-weight: 400; transition: all 0.3s; line-height: 1; }
-.faq-item.open .faq-toggle { background: var(--dt); color: var(--mint); transform: rotate(45deg); }
-.faq-a { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
-.faq-item.open .faq-a { max-height: 200px; }
-.faq-a-inner { padding: 0 26px 20px; font-size: 14px; line-height: 1.8; color: var(--muted); font-weight: 300; border-top: 1px solid var(--border); padding-top: 16px; margin: 0 26px; }
+        @media (max-width: 992px) {
+            .nav-links { 
+                position: fixed; top: 0; right: -100%; width: 100%; height: 100vh; 
+                background: var(--white); flex-direction: column; justify-content: center; 
+                transition: 0.5s; box-shadow: -10px 0 30px rgba(0,0,0,0.05);
+            }
+            .nav-links.active { right: 0; }
+            .menu-toggle { display: flex; }
+            .menu-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(6px, 6px); }
+            .menu-toggle.active span:nth-child(2) { opacity: 0; }
+            .menu-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+        }
 
-/* PORTFOLIO */
-#portfolio { background: var(--white); padding: 120px 60px; min-height: 100vh; }
-.portfolio-inner { max-width: 1200px; margin: 0 auto; }
-.portfolio-header { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 52px; }
-.clients-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-.client-card { border: 1px solid var(--border); border-radius: 20px; padding: 30px; transition: all 0.3s; position: relative; overflow: hidden; background: var(--white); }
-.client-card::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 4px; background: var(--mint); transform: scaleX(0); transition: transform 0.3s ease; }
-.client-card:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(13,79,82,0.1); border-color: rgba(92,232,196,0.45); }
-.client-card:hover::after { transform: scaleX(1); }
-.client-geo { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--mint); font-weight: 600; margin-bottom: 10px; }
-.client-name { font-family: 'Syne', sans-serif; font-size: 21px; font-weight: 800; color: var(--dt); letter-spacing: -0.8px; margin-bottom: 6px; }
-.client-industry { font-size: 13px; color: var(--muted); font-weight: 400; margin-bottom: 18px; }
-.client-services { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 18px; }
-.client-service-tag { background: var(--ml); color: var(--mt); font-size: 11px; padding: 5px 12px; border-radius: 100px; font-weight: 500; }
-.client-result { font-size: 13px; color: var(--body); line-height: 1.65; font-weight: 300; padding-top: 14px; border-top: 1px solid var(--border); }
+        /* HERO WITH MEDIA BACKGROUND */
+        #hero { 
+            position: relative; min-height: 100vh; display: flex; align-items: center; 
+            overflow: hidden; padding-top: var(--nav-height);
+        }
+        .hero-bg-media {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            object-fit: cover; z-index: -2; filter: brightness(0.4) saturate(1.2);
+        }
+        .hero-overlay {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(135deg, rgba(13,79,82,0.85) 0%, rgba(13,79,82,0.4) 100%);
+            z-index: -1;
+        }
+        
+        .hero-container {
+            display: grid; grid-template-columns: 1fr 1fr; width: 90%; max-width: 1400px;
+            margin: 0 auto; gap: 40px; align-items: center; z-index: 10;
+        }
 
-/* CTA */
-#cta { background: var(--dt); min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 120px 60px; position: relative; overflow: hidden; text-align: center; }
-#cta::before { content: ''; position: absolute; width: 800px; height: 800px; border-radius: 50%; border: 1px solid rgba(92,232,196,0.06); top: 50%; left: 50%; transform: translate(-50%,-50%); }
-.cta-inner { max-width: 760px; position: relative; z-index: 2; }
-.cta-eyebrow { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: rgba(92,232,196,0.45); font-weight: 600; margin-bottom: 24px; }
-.cta-quote { font-family: 'Syne', sans-serif; font-size: clamp(36px, 5vw, 62px); font-weight: 800; color: var(--white); line-height: 1.05; letter-spacing: -2.5px; margin-bottom: 30px; }
-.cta-quote em { font-style: normal; color: var(--mint); }
-.cta-sub { font-size: 17px; color: rgba(255,255,255,0.5); font-weight: 300; line-height: 1.75; max-width: 500px; margin: 0 auto 44px; }
-.cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-bottom: 56px; }
-.btn-mint { background: var(--mint); color: var(--dt); padding: 16px 34px; border-radius: 100px; font-size: 15px; font-weight: 600; text-decoration: none; font-family: 'Syne', sans-serif; letter-spacing: -0.3px; transition: all 0.25s; display: inline-flex; align-items: center; gap: 8px; }
-.btn-mint:hover { background: var(--white); transform: translateY(-3px); box-shadow: 0 16px 40px rgba(0,0,0,0.3); }
-.btn-ghost { background: transparent; color: rgba(255,255,255,0.6); padding: 16px 34px; border-radius: 100px; font-size: 15px; font-weight: 400; text-decoration: none; border: 1px solid rgba(255,255,255,0.18); transition: all 0.25s; }
-.btn-ghost:hover { border-color: rgba(255,255,255,0.45); color: var(--white); transform: translateY(-3px); }
-.socials-strip { display: flex; align-items: center; justify-content: center; gap: 22px; padding-top: 36px; border-top: 1px solid rgba(255,255,255,0.07); }
-.social-link { color: rgba(255,255,255,0.35); text-decoration: none; font-size: 13px; font-weight: 500; transition: color 0.25s; }
-.social-link:hover { color: var(--mint); }
-.social-dot { width: 4px; height: 4px; border-radius: 50%; background: rgba(255,255,255,0.12); }
+        .hero-right { color: var(--white); padding: 40px 0; }
+        .hero-tag { 
+            display: inline-block; background: rgba(92,232,196,0.15); 
+            color: var(--mint); border: 1px solid var(--mint); 
+            font-size: 12px; letter-spacing: 2px; text-transform: uppercase; 
+            padding: 8px 18px; border-radius: 100px; margin-bottom: 24px;
+        }
+        .hero-name { 
+            font-family: 'Syne', sans-serif; font-weight: 800; 
+            font-size: clamp(48px, 8vw, 90px); line-height: 0.9; 
+            letter-spacing: -3px; margin-bottom: 20px;
+        }
+        .hero-name .accent { color: var(--mint); display: block; }
+        .hero-desc { 
+            font-size: clamp(16px, 1.2vw, 20px); opacity: 0.9; 
+            max-width: 500px; margin-bottom: 40px; font-weight: 300;
+        }
 
-/* REVEAL */
-.reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
-.reveal.visible { opacity: 1; transform: none; }
-.reveal-delay-1 { transition-delay: 0.1s; }
-.reveal-delay-2 { transition-delay: 0.2s; }
-.reveal-delay-3 { transition-delay: 0.3s; }
-.reveal-delay-4 { transition-delay: 0.4s; }
+        .hero-left { position: relative; border-radius: 30px; overflow: hidden; aspect-ratio: 4/5; }
+        .hero-left img { width: 100%; height: 100%; object-fit: cover; }
 
-@keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
+        @media (max-width: 992px) {
+            #hero { text-align: center; padding-bottom: 60px; }
+            .hero-container { grid-template-columns: 1fr; }
+            .hero-right { order: 2; }
+            .hero-left { order: 1; max-width: 400px; margin: 0 auto; }
+            .hero-desc { margin: 0 auto 40px; }
+            .hero-btns { justify-content: center; }
+        }
 
-footer { background: var(--black); padding: 28px 60px; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
-footer .logo { display: flex; align-items: center; }
-footer .copy { font-size: 12px; color: rgba(255,255,255,0.22); }
-footer .website { font-size: 12px; color: rgba(255,255,255,0.32); text-decoration: none; }
-footer .website:hover { color: var(--mint); }
-</style>
+        /* COMMON SECTION STYLES */
+        section { padding: clamp(60px, 10vh, 120px) 5%; }
+        .section-eyebrow { display: flex; align-items: center; gap: 12px; margin-bottom: 24px; }
+        .eyebrow-line { width: 40px; height: 2px; background: var(--mint); }
+        .eyebrow-text { font-size: 12px; letter-spacing: 3px; text-transform: uppercase; font-weight: 700; color: var(--mint); }
+        .eyebrow-text.dark { color: var(--dt); }
+
+        /* INTRO */
+        #intro { background: var(--dt); color: var(--white); }
+        .intro-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 80px; align-items: start; }
+        .intro-headline { font-family: 'Syne', sans-serif; font-size: clamp(40px, 5.5vw, 76px); font-weight: 800; line-height: 1; margin-bottom: 30px; letter-spacing: -2px; }
+        .intro-headline em { font-style: normal; color: var(--mint); }
+        .intro-body { font-size: 15px; line-height: 1.8; color: rgba(255,255,255,0.7); margin-bottom: 24px; font-weight: 300; max-width: 95%; }
+        
+        .btn-outline-mint { border: 1px solid rgba(92,232,196,0.3); color: var(--mint); padding: 12px 26px; border-radius: 100px; font-size: 14px; font-weight: 500; text-decoration: none; display: inline-flex; align-items: center; transition: 0.3s; }
+        .btn-outline-mint:hover { background: rgba(92,232,196,0.1); border-color: var(--mint); transform: translateY(-2px); }
+        
+        .skills-label { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--mint); font-weight: 700; margin-bottom: 16px; }
+        .skill-tag { display: inline-block; padding: 8px 16px; border-radius: 100px; background: transparent; border: 1px solid rgba(92,232,196,0.2); color: var(--mint); margin: 0 8px 12px 0; font-size: 13px; transition: 0.3s; }
+        .skill-tag:hover { background: rgba(92,232,196,0.1); border-color: rgba(92,232,196,0.5); transform: translateY(-2px); }
+        
+        .intro-stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+        .istat { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); border-radius: 16px; padding: 30px 24px; transition: 0.3s; }
+        .istat:hover { border-color: rgba(92,232,196,0.3); background: rgba(92,232,196,0.05); transform: translateY(-4px); }
+        .istat-num { font-family: 'Syne', sans-serif; font-size: clamp(32px, 4vw, 48px); font-weight: 800; color: var(--mint); line-height: 1; margin-bottom: 12px; letter-spacing: -1px; }
+        .istat-label { font-size: 13px; color: rgba(255,255,255,0.5); line-height: 1.5; }
+
+        @media (min-width: 993px) {
+            .intro-right-col { margin-top: 80px; }
+        }
+
+        @media (max-width: 992px) {
+            .intro-grid { grid-template-columns: 1fr; gap: 50px; }
+            .intro-stats-grid { grid-template-columns: 1fr; }
+        }
+
+        /* SERVICES GRID */
+        .services-grid { 
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+            gap: 24px; margin-top: 50px; 
+        }
+        .service-card { 
+            background: var(--white); padding: 40px; border-radius: 24px; 
+            border: 1px solid var(--border); transition: 0.4s ease; 
+        }
+        .service-card:hover { transform: translateY(-10px); box-shadow: 0 30px 60px rgba(13,79,82,0.1); border-color: var(--mint); }
+
+        /* EDUCATION */
+        .edu-inner { display: grid; grid-template-columns: 1fr 1.5fr; gap: 80px; }
+        @media (max-width: 992px) { .edu-inner { grid-template-columns: 1fr; } }
+
+        /* TOOLS */
+        #tools { 
+            background: var(--black) url('https://www.transparenttextures.com/patterns/carbon-fibre.png'); 
+            color: var(--white); 
+        }
+        .tools-pills { display: flex; flex-wrap: wrap; gap: 12px; }
+        .tool-pill { 
+            padding: 12px 24px; border-radius: 100px; background: rgba(255,255,255,0.05); 
+            border: 1px solid rgba(255,255,255,0.1); font-size: 14px; transition: 0.3s;
+        }
+        .tool-pill.featured { border-color: var(--mint); color: var(--mint); }
+
+        /* CLIENTS */
+        .clients-grid { 
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+            gap: 20px; 
+        }
+        .client-card { 
+            background: var(--white); border: 1px solid var(--border); 
+            padding: 30px; border-radius: 24px; transition: 0.3s;
+        }
+        .client-card:hover { border-color: var(--mint); background: var(--off); }
+
+        /* RESTORED TIMELINE CSS */
+        .timeline { display: flex; flex-direction: column; position: relative; padding-top: 4px; margin-top: 30px;}
+        .timeline::before { content: ''; position: absolute; left: 19px; top: 0; bottom: 0; width: 2px; background: var(--border); }
+        .tl-item { display: flex; gap: 22px; position: relative; padding-bottom: 28px; }
+        .tl-item:last-child { padding-bottom: 0; }
+        .tl-dot { width: 40px; height: 40px; border-radius: 50%; background: var(--dt); border: 3px solid var(--mint); display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0; position: relative; z-index: 2; transition: all 0.3s; }
+        .tl-item:hover .tl-dot { transform: scale(1.1); }
+        .tl-content { background: var(--off); border: 1px solid var(--border); border-radius: 14px; padding: 20px 22px; flex: 1; transition: all 0.3s; }
+        .tl-item:hover .tl-content { border-color: rgba(92,232,196,0.35); background: var(--ml); }
+        .tl-date { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--mint); font-weight: 600; margin-bottom: 5px; }
+        .tl-title { font-family: 'Syne', sans-serif; font-size: 15px; font-weight: 700; color: var(--dt); letter-spacing: -0.3px; margin-bottom: 4px; }
+        .tl-sub { font-size: 13px; color: var(--muted); line-height: 1.55; }
+        .tl-badge { display: inline-block; margin-top: 10px; font-size: 11px; background: var(--dt); color: var(--mint); padding: 4px 12px; border-radius: 100px; font-weight: 500; }
+
+        /* RESTORED FAQ CSS */
+        #faq { background: var(--ml); }
+        .faq-inner { display: grid; grid-template-columns: 1fr 1.5fr; gap: 80px; align-items: start; max-width: 1200px; margin: 0 auto; }
+        @media (max-width: 992px) { .faq-inner { grid-template-columns: 1fr; gap: 40px; } }
+        .faq-sub { font-size: 15px; color: var(--muted); line-height: 1.8; font-weight: 300; margin-bottom: 36px; }
+        .faq-contact-box { background: var(--dt); border-radius: 20px; padding: 30px; }
+        .faq-contact-label { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--mint); font-weight: 600; margin-bottom: 10px; }
+        .faq-contact-text { font-size: 14px; color: rgba(255,255,255,0.6); line-height: 1.7; font-weight: 300; margin-bottom: 18px; }
+        .faq-list { display: flex; flex-direction: column; gap: 10px; }
+        .faq-item { background: var(--white); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; transition: all 0.3s; }
+        .faq-item:hover { border-color: rgba(92,232,196,0.4); }
+        .faq-q { padding: 20px 26px; display: flex; align-items: center; justify-content: space-between; cursor: pointer; gap: 16px; user-select: none; }
+        .faq-q-text { font-family: 'Syne', sans-serif; font-size: 15px; font-weight: 700; color: var(--dt); letter-spacing: -0.3px; line-height: 1.3; }
+        .faq-toggle { width: 28px; height: 28px; border-radius: 50%; background: var(--ml); border: 1.5px solid rgba(92,232,196,0.35); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 18px; color: var(--dt); font-weight: 400; transition: all 0.3s; line-height: 1; }
+        .faq-item.open .faq-toggle { background: var(--dt); color: var(--mint); transform: rotate(45deg); }
+        .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
+        .faq-item.open .faq-a { max-height: 300px; }
+        .faq-a-inner { padding: 0 26px 20px; font-size: 14px; line-height: 1.8; color: var(--muted); font-weight: 300; border-top: 1px solid var(--border); padding-top: 16px; margin: 0 26px; }
+
+        /* HIRE ME STRIP */
+        .hire-strip { margin-top:48px; padding:32px 40px; background:var(--off); border-radius:20px; border:1px solid var(--border); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:20px; }
+        .hire-strip-btns { display:flex; gap:12px; flex-wrap:wrap; }
+        .hire-btn { display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:100px;background:var(--white);border:1.5px solid var(--border);color:var(--dt);text-decoration:none;font-size:13px;font-weight:600;transition:all 0.2s; }
+        .hire-btn:hover { border-color:var(--mint); }
+        .hire-btn-primary { display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:100px;background:var(--dt);color:#fff;text-decoration:none;font-size:13px;font-weight:600;transition:all 0.2s; }
+        .hire-btn-primary:hover { background:var(--mt); }
+
+        /* CTA SECTION WITH IMAGE BACKGROUND */
+        #cta {
+            position: relative; min-height: 80vh; display: flex; align-items: center; 
+            justify-content: center; text-align: center; color: var(--white);
+            background: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80') center/cover no-repeat;
+        }
+        #cta::after {
+            content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(13,79,82,0.92); z-index: 1;
+        }
+        .cta-inner { position: relative; z-index: 2; max-width: 800px; width: 90%; }
+
+        /* BUTTONS */
+        .btn-primary, .btn-mint { 
+            background: var(--mint); color: var(--dt); padding: 16px 32px; 
+            border-radius: 100px; font-weight: 700; text-decoration: none; 
+            display: inline-flex; align-items: center; gap: 10px; transition: 0.3s; 
+            font-family: 'Syne', sans-serif;
+        }
+        .btn-primary:hover { background: var(--white); transform: translateY(-3px); }
+
+        .btn-outline { 
+            border: 2px solid var(--white); color: var(--white); padding: 16px 32px; 
+            border-radius: 100px; font-weight: 700; text-decoration: none; 
+            transition: 0.3s; 
+        }
+        .btn-outline:hover { background: var(--white); color: var(--dt); }
+
+        /* REVEAL ANIMATION */
+        .reveal { opacity: 0; transform: translateY(30px); transition: 0.8s cubic-bezier(0.4, 0, 0.2, 1); }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+
+        footer { background: var(--black); padding: 60px 5%; color: rgba(255,255,255,0.5); text-align: center; }
+        .footer-logo { margin-bottom: 20px; }
+        .footer-logo a { 
+            display: inline-block; 
+            font-family: 'Syne', sans-serif; 
+            font-size: 24px; 
+            font-weight: 800; 
+            color: var(--white); 
+            text-decoration: none; 
+            letter-spacing: -0.5px;
+            transition: transform 0.3s ease, color 0.3s ease; 
+        }
+        .footer-logo a:hover { transform: scale(1.05); color: var(--mint); }
+
+        /* UTILS */
+        .mt-20 { margin-top: 20px; }
+        .mb-40 { margin-bottom: 40px; }
+
+        /* --- ENHANCED MOBILE RESPONSIVENESS (PHONES & TABLETS) --- */
+        @media (max-width: 768px) {
+            section { padding: 60px 5%; }
+            .hero-name { font-size: clamp(40px, 12vw, 56px); letter-spacing: -1.5px; }
+            .hero-desc { font-size: 15px; margin-bottom: 30px; }
+            .hero-left { aspect-ratio: 1; border-radius: 20px; }
+            
+            /* Stack buttons to full width on mobile */
+            .hero-btns, .hire-strip-btns, .cta-btns-wrapper { flex-direction: column !important; width: 100%; }
+            .btn-primary, .btn-outline, .btn-mint, .btn-outline-mint, .hire-btn, .hire-btn-primary { 
+                width: 100%; justify-content: center; text-align: center; 
+            }
+            
+            /* Fix grids and spacing */
+            .intro-stats-grid { grid-template-columns: 1fr; gap: 12px; }
+            .istat { padding: 24px 20px; }
+            
+            /* Hire strip centering */
+            .hire-strip { flex-direction: column; text-align: center; padding: 24px; gap: 24px; }
+            .hire-strip > div { width: 100%; }
+            
+            /* Timeline scaling */
+            .timeline::before { left: 15px; }
+            .tl-dot { width: 32px; height: 32px; font-size: 14px; }
+            .tl-item { gap: 16px; }
+            .tl-content { padding: 16px; }
+            
+            /* Fix horizontal scroll triggers */
+            .intro-headline { font-size: clamp(34px, 10vw, 44px); }
+            .section-eyebrow { margin-bottom: 16px; }
+        }
+    </style>
 </head>
 <body>
 
 <div class="cursor" id="cursor"></div>
 <div class="cursor-ring" id="cursorRing"></div>
 
-<!-- NAV -->
+<!-- NAVIGATION -->
 <nav id="navbar">
-  <a class="nav-logo" href="#hero" style="display:flex;align-items:center;">
-    <img src="https://res.cloudinary.com/ds8zdlhmt/image/upload/v1774274972/EAS_Agency_dtcyn6.png" alt="EAS Agency" style="height:56px;width:auto;object-fit:contain;display:block;">
-  </a>
-  <ul class="nav-links">
-    <li><a href="#intro">About</a></li>
-    <li><a href="#services">Services</a></li>
-    <li><a href="#education">Education</a></li>
-    <li><a href="#tools">Tools</a></li>
-    <li><a href="#faq">FAQ</a></li>
-    <li><a href="#portfolio">Portfolio</a></li>
-    <li><span id="gcal-btn" class="nav-cta-gcal"></span></li>
-  </ul>
+    <a class="nav-logo" href="#hero">
+        <img src="https://res.cloudinary.com/ds8zdlhmt/image/upload/v1774274972/EAS_Agency_dtcyn6.png" alt="EAS Agency">
+    </a>
+    
+    <div class="menu-toggle" id="mobile-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <ul class="nav-links" id="nav-links">
+        <li><a href="#intro">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#tools">Tech Stack</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#portfolio">Work</a></li>
+        <li><span id="gcal-btn"></span></li>
+    </ul>
 </nav>
 
-<!-- PAGE 01 HERO -->
+<!-- HERO SECTION -->
 <section id="hero">
-  <div class="hero-left">
-    <div class="hero-photo-placeholder">
-      <img src="https://res.cloudinary.com/ds8zdlhmt/image/upload/v1774274916/Emmanuel_Aderemi_4_of_6_iyx8b9.jpg" alt="Emmie Aderemi" style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block;border-radius:0;">
+    <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2564&auto=format&fit=crop" class="hero-bg-media" alt="Abstract Dark Background">
+    <div class="hero-overlay"></div>
+    
+    <div class="hero-container">
+        <div class="hero-right">
+            <div class="hero-tag">Growth Marketing Strategist</div>
+            <h1 class="hero-name">
+                Emmie
+                <span class="accent">Aderemi</span>
+            </h1>
+            <p class="hero-desc">I help clinics, founders, and local businesses replace manual work with AI automation — saving time, cutting costs, and scaling faster.</p>
+            <div class="hero-btns mt-20" style="display:flex; gap:15px; flex-wrap:wrap;">
+                <a href="#portfolio" class="btn-primary">View My Work &nbsp;→</a>
+                <a href="https://wa.me/message/Z6O64VPAUCO3P1" target="_blank" class="btn-outline">Get In Touch</a>
+            </div>
+        </div>
+        <div class="hero-left">
+            <img src="https://res.cloudinary.com/ds8zdlhmt/image/upload/v1774274916/Emmanuel_Aderemi_4_of_6_iyx8b9.jpg" alt="Emmanuel Aderemi">
+        </div>
     </div>
-  </div>
-  <div class="hero-right">
-    <div class="hero-tag">Growth Marketing Strategist</div>
-    <h1 class="hero-name">
-      Emmie
-      <span class="accent">Aderemi</span>
-    </h1>
-    <p class="hero-title">AI Automation Expert &nbsp;·&nbsp; Founder @ EAS Agency</p>
-    <p class="hero-desc">I help clinics, founders, and local businesses replace manual work with AI automation — so they save time, cut costs, and grow online faster.</p>
-    <div class="hero-btns">
-      <a href="#portfolio" class="btn-primary">View My Work &nbsp;→</a>
-      <a href="https://wa.me/message/Z6O64VPAUCO3P1" target="_blank" class="btn-outline">Get In Touch</a>
-    </div>
-    <div class="hero-stats">
-      <div class="stat-item">
-        <div class="stat-num">10<span>+</span></div>
-        <div class="stat-label">Clients Served</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-num">5<span>+</span></div>
-        <div class="stat-label">Industries</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-num">4<span>+</span></div>
-        <div class="stat-label">Countries</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-num">4<span>yrs</span></div>
-        <div class="stat-label">Experience</div>
-      </div>
-    </div>
-  </div>
 </section>
 
-<!-- PAGE 02 INTRODUCTION -->
+<!-- ABOUT / INTRO -->
 <section id="intro">
-  <div class="intro-inner">
-    <div class="section-eyebrow reveal">
-      <div class="eyebrow-line"></div>
-      <span class="eyebrow-text">02 · Introduction</span>
-    </div>
     <div class="intro-grid">
-      <div>
-        <h2 class="intro-headline reveal reveal-delay-1">I Help Businesses<br>Replace Manual<br>Work with <em>AI</em></h2>
-        <p class="intro-body reveal reveal-delay-2">Based in Lagos, Nigeria — working globally. I partner with clinics, founders, coaches, and local businesses to build AI-powered systems that handle the repetitive work, so they can focus on what actually moves the needle.</p>
-        <p class="intro-body reveal reveal-delay-3">From AI voice agents to CRM automation, content pipelines to ad campaigns — I design, build, and deliver end-to-end digital growth systems grounded in real results, not vanity metrics.</p>
-        <a href="#portfolio" class="btn-outline reveal reveal-delay-4" style="display:inline-block; margin-top:8px; border-color:rgba(92,232,196,0.35); color:var(--mint);">See Client Results &nbsp;→</a>
-      </div>
-      <div>
-        <div class="skills-label reveal">Core Expertise</div>
-        <div class="skills-tags reveal reveal-delay-1">
-          <span class="skill-tag">AI Automation</span>
-          <span class="skill-tag">Digital Marketing</span>
-          <span class="skill-tag">CRM Setup</span>
-          <span class="skill-tag">Social Media</span>
-          <span class="skill-tag">Content Strategy</span>
-          <span class="skill-tag">Client Acquisition</span>
-          <span class="skill-tag">Email Marketing</span>
-          <span class="skill-tag">Growth Strategy</span>
-          <span class="skill-tag">Ad Management</span>
-          <span class="skill-tag">AI Voice Agents</span>
+        <div class="reveal">
+            <div class="section-eyebrow" style="margin-bottom: 30px;">
+                <div class="eyebrow-line"></div>
+                <span class="eyebrow-text">02 · Introduction</span>
+            </div>
+            <h2 class="intro-headline">I Help<br>Businesses<br>Replace<br>Manual<br>Work with <em>AI</em></h2>
+            <p class="intro-body">Based in Lagos, Nigeria — working globally. I partner with clinics, founders, coaches, and local businesses to build AI-powered systems that handle the repetitive work, so they can focus on what actually moves the needle.</p>
+            <p class="intro-body">From AI voice agents to CRM automation, content pipelines to ad campaigns — I design, build, and deliver end-to-end digital growth systems grounded in real results, not vanity metrics.</p>
+            <a href="#portfolio" class="btn-outline-mint" style="margin-top:20px;">See Client Results &nbsp;→</a>
         </div>
-        <div class="intro-stats-grid reveal reveal-delay-2">
-          <div class="istat">
-            <div class="istat-num">10+</div>
-            <div class="istat-label">Clients across healthcare, coaching, education & tech</div>
-          </div>
-          <div class="istat">
-            <div class="istat-num">4</div>
-            <div class="istat-label">Countries: Nigeria, USA, Thailand, UK</div>
-          </div>
-          <div class="istat">
-            <div class="istat-num">100%</div>
-            <div class="istat-label">Remote delivery worldwide</div>
-          </div>
-          <div class="istat">
-            <div class="istat-num">4yrs</div>
-            <div class="istat-label">Building AI-powered growth systems</div>
-          </div>
+        <div class="reveal intro-right-col">
+            <div class="skills-label">Core Expertise</div>
+            <div class="skills-tags mb-40">
+                <span class="skill-tag">AI Automation</span>
+                <span class="skill-tag">Digital Marketing</span>
+                <span class="skill-tag">CRM Setup</span>
+                <span class="skill-tag">Social Media</span>
+                <span class="skill-tag">Content Strategy</span>
+                <span class="skill-tag">Client Acquisition</span>
+                <span class="skill-tag">Email Marketing</span>
+                <span class="skill-tag">Growth Strategy</span>
+                <span class="skill-tag">Ad Management</span>
+                <span class="skill-tag">AI Voice Agents</span>
+            </div>
+            
+            <div class="intro-stats-grid">
+                <div class="istat">
+                    <div class="istat-num">10+</div>
+                    <div class="istat-label">Clients across healthcare,<br>coaching, education & tech</div>
+                </div>
+                <div class="istat">
+                    <div class="istat-num">4</div>
+                    <div class="istat-label">Countries: Nigeria, USA, Thailand, UK</div>
+                </div>
+                <div class="istat">
+                    <div class="istat-num">100%</div>
+                    <div class="istat-label">Remote delivery worldwide</div>
+                </div>
+                <div class="istat">
+                    <div class="istat-num">4yrs</div>
+                    <div class="istat-label">Building AI-powered growth<br>systems</div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </section>
 
-<!-- PAGE 03 SERVICES -->
-<section id="services">
-  <div class="section-header reveal">
-    <div>
-      <div class="section-eyebrow" style="margin-bottom:14px;">
+<!-- SERVICES -->
+<section id="services" style="background:var(--off);">
+    <div class="section-eyebrow reveal">
         <div class="eyebrow-line"></div>
-        <span class="eyebrow-text dark">03 · Services</span>
-      </div>
-      <h2 class="section-title">What I Do<br><em>For You</em></h2>
-    </div>
-    <p class="section-desc">Six core services built from real client work. Every service I offer has already been delivered — no theory, no guesswork.</p>
-  </div>
-  <div class="services-grid">
-    <div class="service-card reveal reveal-delay-1">
-      <div class="service-icon">⚡</div>
-      <div class="service-name">AI Automation</div>
-      <div class="service-desc">End-to-end automation workflows that replace repetitive tasks. AI voice agents, chatbots, content pipelines, and WhatsApp automation built for real businesses.</div>
-      <div class="service-tools"><span class="tool-tag">n8n</span><span class="tool-tag">Retell.ai</span><span class="tool-tag">ElevenLabs</span><span class="tool-tag">Twilio</span><span class="tool-tag">Seedance</span></div>
-    </div>
-    <div class="service-card reveal reveal-delay-2">
-      <div class="service-icon">📊</div>
-      <div class="service-name">Digital Marketing</div>
-      <div class="service-desc">Full-funnel digital marketing strategy. Paid ads, SEO, content marketing, and campaign management across Meta, LinkedIn, and LINE Ads.</div>
-      <div class="service-tools"><span class="tool-tag">Meta Ads</span><span class="tool-tag">LINE Ads</span><span class="tool-tag">SEO</span><span class="tool-tag">Analytics</span></div>
-    </div>
-    <div class="service-card reveal reveal-delay-3">
-      <div class="service-icon">🤝</div>
-      <div class="service-name">CRM & Email Setup</div>
-      <div class="service-desc">Full CRM builds covering pipelines, email sequences, onboarding flows, and client communication automation from day one.</div>
-      <div class="service-tools"><span class="tool-tag">GoHighLevel</span><span class="tool-tag">System.io</span><span class="tool-tag">Airtable</span></div>
-    </div>
-    <div class="service-card reveal reveal-delay-1">
-      <div class="service-icon">📱</div>
-      <div class="service-name">Social Media Management</div>
-      <div class="service-desc">Content strategy, scheduling, and community management. AI-assisted content creation and automated publishing across all platforms.</div>
-      <div class="service-tools"><span class="tool-tag">Buffer</span><span class="tool-tag">Blotato</span><span class="tool-tag">Posteverywhere</span></div>
-    </div>
-    <div class="service-card reveal reveal-delay-2">
-      <div class="service-icon">🎯</div>
-      <div class="service-name">Growth Strategy</div>
-      <div class="service-desc">90-day growth roadmaps with phase-by-phase execution plans. Market entry strategy, competitive analysis, and KPI frameworks that get used.</div>
-      <div class="service-tools"><span class="tool-tag">Roadmapping</span><span class="tool-tag">Market Research</span><span class="tool-tag">KPIs</span></div>
-    </div>
-    <div class="service-card reveal reveal-delay-3">
-      <div class="service-icon">🚀</div>
-      <div class="service-name">Client Acquisition</div>
-      <div class="service-desc">Lead generation systems, outbound call agents, and sales funnel automation built to generate and qualify leads around the clock.</div>
-      <div class="service-tools"><span class="tool-tag">AI Voice Agent</span><span class="tool-tag">Funnel Build</span><span class="tool-tag">Lead Gen</span></div>
-    </div>
-  </div>
-</section>
-
-<!-- PAGE 04 EDUCATION -->
+            <div class="service-card reveal">
+                <div style="font-size:40px; margin-bottom:20px;">🤝</div>
+                <h3 style="font-family:'Syne'; margin-bottom:15px; color:var(--dt);">CRM Setup</h3>
+                <p style="color:var(--muted); font-size:15px;">Full GoHighLevel and Airtable builds with automated onboarding and sales pipelines.</p>
+            </div>
+            <div class="service-card reveal">
+                <div style="font-size:40px; margin-bottom:20px;">📱</div>
+                <h3 style="font-family:'Syne'; margin-bottom:15px; color:var(--dt);">Social Media Management</h3>
+                <p style="color:var(--muted); font-size:15px;">Content strategy, scheduling, and community management. AI-assisted content creation across all platforms.</p>
+            </div>
+            <div class="service-card reveal">
+                <div style="font-size:40px; margin-bottom:20px;">🎯</div>
+                <h3 style="font-family:'Syne'; margin-bottom:15px; color:var(--dt);">Growth Strategy</h3>
+                <p style="color:var(--muted); font-size:15px;">90-day growth roadmaps with phase-by-phase execution plans. Market entry strategy and KPI frameworks.</p>
+            </div>
+            <div class="service-card reveal">
+                <div style="font-size:40px; margin-bottom:20px;">🚀</div>
+                <h3 style="font-family:'Syne'; margin-bottom:15px; color:var(--dt);">Client Acquisition</h3>
+                <p style="color:var(--muted); font-size:15px;">Lead generation systems, outbound call agents, and sales funnel automation built to qualify leads around the clock.</p>
+            </div>
+        </div>
+    </section>
+    
+<!-- EDUCATION -->
 <section id="education">
-  <div class="edu-inner">
-    <div>
-      <div class="section-eyebrow reveal" style="margin-bottom:14px;">
-        <div class="eyebrow-line"></div>
-        <span class="eyebrow-text dark">04 · Education</span>
-      </div>
-      <h2 class="section-title reveal reveal-delay-1" style="margin-bottom:18px;">Built on Real<br>Education</h2>
-      <p class="edu-tagline reveal reveal-delay-2">First-class academic foundations combined with hands-on professional training and real-world client delivery.</p>
-      <div class="edu-highlight reveal reveal-delay-3">
-        <div class="edu-hl-label">Academic Achievement</div>
-        <div class="edu-hl-text">First Class Honours — FUNAAB</div>
-        <div class="edu-hl-sub">B.Sc. Agricultural Administration · 2016 – 2021</div>
-      </div>
+    <div class="edu-inner">
+        <div class="reveal">
+            <div class="section-eyebrow">
+                <div class="eyebrow-line"></div>
+                <span class="eyebrow-text dark">04 · Education</span>
+            </div>
+            <h2 class="intro-headline" style="color:var(--dt); font-size:40px;">Solid<br>Foundations.</h2>
+            <div style="background:var(--dt); padding:30px; border-radius:20px; color:var(--white); margin-top:30px;">
+                <p style="color:var(--mint); font-size:12px; text-transform:uppercase; margin-bottom:10px;">Professional Certification</p>
+                <h4 style="font-family:'Syne'; font-size:22px; margin-bottom:4px;">Torilo Academy</h4>
+                <p style="opacity:0.6; font-size:14px;">Digital Marketing Professional · Certified</p>
+            </div>
+        </div>
+        <div class="reveal">
+            <div class="timeline">
+                <div class="tl-item">
+                    <div class="tl-dot">🎓</div>
+                    <div class="tl-content">
+                        <div class="tl-date">Feb 2016 – Sep 2021</div>
+                        <div class="tl-title">Federal University of Agriculture, Abeokuta</div>
+                        <div class="tl-sub">Bachelor of Agricultural Administration</div>
+                        <span class="tl-badge">First Class Honours</span>
+                    </div>
+                </div>
+                <div class="tl-item">
+                    <div class="tl-dot">📈</div>
+                    <div class="tl-content">
+                        <div class="tl-date">2025 · Lagos, Nigeria</div>
+                        <div class="tl-title">Torilo Academy — Digital Marketing Professional</div>
+                        <div class="tl-sub">Comprehensive training in digital strategy, content marketing, and performance advertising.</div>
+                        <span class="tl-badge">Certified</span>
+                    </div>
+                </div>
+                <div class="tl-item">
+                    <div class="tl-dot">🏅</div>
+                    <div class="tl-content">
+                        <div class="tl-date">Issued Jan 2026</div>
+                        <div class="tl-title">Google — Design Prompts for Everyday Work Tasks</div>
+                        <div class="tl-sub">Credential ID: A3QL1F0QQM57 · Google-issued AI productivity certification.</div>
+                        <span class="tl-badge">Google Certified</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="timeline">
-      <div class="tl-item reveal">
-        <div class="tl-dot">🎓</div>
-        <div class="tl-content">
-          <div class="tl-date">Feb 2016 – Sep 2021</div>
-          <div class="tl-title">Federal University of Agriculture, Abeokuta</div>
-          <div class="tl-sub">Bachelor of Agricultural Administration</div>
-          <span class="tl-badge">First Class Honours</span>
-        </div>
-      </div>
-      <div class="tl-item reveal reveal-delay-1">
-        <div class="tl-dot">📈</div>
-        <div class="tl-content">
-          <div class="tl-date">2025 · Lagos, Nigeria</div>
-          <div class="tl-title">Torilo Academy — Digital Marketing Professional</div>
-          <div class="tl-sub">Comprehensive training in digital strategy, content marketing, and performance advertising.</div>
-          <span class="tl-badge">Certified</span>
-        </div>
-      </div>
-      <div class="tl-item reveal reveal-delay-2">
-        <div class="tl-dot">🏅</div>
-        <div class="tl-content">
-          <div class="tl-date">Issued Jan 2026</div>
-          <div class="tl-title">Google — Design Prompts for Everyday Work Tasks</div>
-          <div class="tl-sub">Credential ID: A3QL1F0QQM57 · Google-issued AI productivity certification.</div>
-          <span class="tl-badge">Google Certified</span>
-        </div>
-      </div>
-      <div class="tl-item reveal reveal-delay-3">
-        <div class="tl-dot">💼</div>
-        <div class="tl-content">
-          <div class="tl-date">Sep 2024 – Present · Remote · UK</div>
-          <div class="tl-title">WinTrade Global Network — AI Automation Expert</div>
-          <div class="tl-sub">Email sequence automation, Make.com workflows, CRM management for London-based network.</div>
-          <span class="tl-badge">Freelance · Active</span>
-        </div>
-      </div>
-      <div class="tl-item reveal reveal-delay-4">
-        <div class="tl-dot">🌍</div>
-        <div class="tl-content">
-          <div class="tl-date">Jan 2026 – Present · Remote · USA</div>
-          <div class="tl-title">Mind, Behavior & Psychiatric Clinic — Growth Strategist</div>
-          <div class="tl-sub">Business growth strategies, funnel building, CRM setup for Texas-based psychiatric clinic.</div>
-          <span class="tl-badge">Full-Time · Active</span>
-        </div>
-      </div>
-    </div>
-  </div>
 </section>
 
-<!-- PAGE 05 TOOLS -->
+<!-- TECH STACK -->
 <section id="tools">
-  <div class="tools-inner">
     <div class="reveal">
-      <div class="section-eyebrow" style="margin-bottom:16px;">
-        <div class="eyebrow-line"></div>
-        <span class="eyebrow-text">05 · Tech Stack</span>
-      </div>
-      <h2 class="tools-title">The Systems &amp; Tools<br>Behind the <em>Results</em></h2>
-      <p class="tools-sub">Every tool in my stack has been used in live client projects. No toy demos — these are production systems.</p>
+        <div class="section-eyebrow">
+            <div class="eyebrow-line"></div>
+            <span class="eyebrow-text">05 · Tech Stack</span>
+        </div>
+        <h2 class="intro-headline">The <em>Tools</em> I Use</h2>
+        
+        <div style="display:flex; flex-direction:column; gap:40px; margin-top:40px;">
+            <div>
+                <p style="color:var(--mint); font-size:11px; text-transform:uppercase; letter-spacing:2px; margin-bottom:15px; border-bottom:1px solid rgba(255,255,255,0.1); padding-bottom:10px;">AI & Automation</p>
+                <div class="tools-pills">
+                    <span class="tool-pill featured">n8n</span>
+                    <span class="tool-pill featured">Retell.ai</span>
+                    <span class="tool-pill featured">ElevenLabs</span>
+                    <span class="tool-pill featured">Twilio</span>
+                    <span class="tool-pill featured">Seedance</span>
+                    <span class="tool-pill">Claude AI</span>
+                    <span class="tool-pill">Make.com</span>
+                    <span class="tool-pill">OpenAI API</span>
+                    <span class="tool-pill">Playwright</span>
+                    <span class="tool-pill">json2video</span>
+                </div>
+            </div>
+            <div>
+                <p style="color:var(--mint); font-size:11px; text-transform:uppercase; letter-spacing:2px; margin-bottom:15px; border-bottom:1px solid rgba(255,255,255,0.1); padding-bottom:10px;">CRM & Operations</p>
+                <div class="tools-pills">
+                    <span class="tool-pill featured">GoHighLevel</span>
+                    <span class="tool-pill featured">Airtable</span>
+                    <span class="tool-pill featured">System.io</span>
+                    <span class="tool-pill">Katra</span>
+                    <span class="tool-pill">WhatsApp Business API</span>
+                    <span class="tool-pill">Zapier</span>
+                    <span class="tool-pill">Notion</span>
+                </div>
+            </div>
+            <div>
+                <p style="color:var(--mint); font-size:11px; text-transform:uppercase; letter-spacing:2px; margin-bottom:15px; border-bottom:1px solid rgba(255,255,255,0.1); padding-bottom:10px;">Content, Ads & Analytics</p>
+                <div class="tools-pills">
+                    <span class="tool-pill featured">Meta Ads Manager</span>
+                    <span class="tool-pill featured">LINE Ads Manager</span>
+                    <span class="tool-pill featured">Posteverywhere</span>
+                    <span class="tool-pill featured">Blotato</span>
+                    <span class="tool-pill">Google Analytics</span>
+                    <span class="tool-pill">Buffer</span>
+                    <span class="tool-pill">Canva</span>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="tools-categories">
-      <div class="reveal">
-        <div class="tool-cat-label">AI &amp; Automation</div>
-        <div class="tools-pills">
-          <span class="tool-pill featured">n8n</span>
-          <span class="tool-pill featured">Retell.ai</span>
-          <span class="tool-pill featured">ElevenLabs</span>
-          <span class="tool-pill featured">Twilio</span>
-          <span class="tool-pill featured">Seedance</span>
-          <span class="tool-pill">Claude AI</span>
-          <span class="tool-pill">Make.com</span>
-          <span class="tool-pill">OpenAI API</span>
-          <span class="tool-pill">Playwright</span>
-          <span class="tool-pill">json2video</span>
-        </div>
-      </div>
-      <div class="reveal reveal-delay-1">
-        <div class="tool-cat-label">CRM &amp; Operations</div>
-        <div class="tools-pills">
-          <span class="tool-pill featured">GoHighLevel</span>
-          <span class="tool-pill featured">Airtable</span>
-          <span class="tool-pill featured">System.io</span>
-          <span class="tool-pill">Katra</span>
-          <span class="tool-pill">WhatsApp Business API</span>
-          <span class="tool-pill">Zapier</span>
-          <span class="tool-pill">Notion</span>
-        </div>
-      </div>
-      <div class="reveal reveal-delay-2">
-        <div class="tool-cat-label">Content &amp; Social Media</div>
-        <div class="tools-pills">
-          <span class="tool-pill featured">Posteverywhere</span>
-          <span class="tool-pill featured">Blotato</span>
-          <span class="tool-pill featured">Buffer</span>
-          <span class="tool-pill">Canva</span>
-          <span class="tool-pill">Meta Business Suite</span>
-          <span class="tool-pill">LinkedIn Campaign Manager</span>
-        </div>
-      </div>
-      <div class="reveal reveal-delay-3">
-        <div class="tool-cat-label">Advertising &amp; Analytics</div>
-        <div class="tools-pills">
-          <span class="tool-pill featured">Meta Ads Manager</span>
-          <span class="tool-pill featured">LINE Ads Manager</span>
-          <span class="tool-pill">Google Analytics</span>
-          <span class="tool-pill">Facebook Pixel</span>
-          <span class="tool-pill">UTM Tracking</span>
-          <span class="tool-pill">A/B Testing</span>
-        </div>
-      </div>
-    </div>
-  </div>
 </section>
 
-<!-- PAGE 06 FAQ -->
+<!-- FAQ SECTION -->
 <section id="faq">
-  <div class="faq-inner">
-    <div>
-      <div class="section-eyebrow reveal" style="margin-bottom:14px;">
-        <div class="eyebrow-line"></div>
-        <span class="eyebrow-text dark">06 · FAQ</span>
-      </div>
-      <h2 class="section-title reveal reveal-delay-1" style="margin-bottom:16px;">Got Questions?<br>Here Are<br>the Answers.</h2>
-      <p class="faq-sub reveal reveal-delay-2">The most common questions I get before we start working together.</p>
-      <div class="faq-contact-box reveal reveal-delay-3">
-        <div class="faq-contact-label">Still Have Questions?</div>
-        <div class="faq-contact-text">I respond to every message within 24 hours. Let's talk about what you need.</div>
-        <a href="/cdn-cgi/l/email-protection#59313c353536193c3434303c382c2d3634382d3c773a3634" class="btn-mint" style="font-size:13px; padding:11px 22px;">Send a Message &nbsp;→</a>
-      </div>
+    <div class="faq-inner">
+        <div>
+            <div class="section-eyebrow reveal" style="margin-bottom:14px;">
+                <div class="eyebrow-line"></div>
+                <span class="eyebrow-text dark">06 · FAQ</span>
+            </div>
+            <h2 class="intro-headline reveal" style="color:var(--dt); margin-bottom:16px;">Got Questions?<br>Here Are<br>the Answers.</h2>
+            <p class="faq-sub reveal">The most common questions I get before we start working together.</p>
+            <div class="faq-contact-box reveal">
+                <div class="faq-contact-label">Still Have Questions?</div>
+                <div class="faq-contact-text">I respond to every message within 24 hours. Let's talk about what you need.</div>
+                <a href="mailto:hello@emmieautomate.com" class="btn-mint" style="font-size:13px; padding:11px 22px;">Send a Message &nbsp;→</a>
+            </div>
+        </div>
+        <div class="faq-list reveal">
+            <div class="faq-item open">
+                <div class="faq-q" onclick="toggleFaq(this)">
+                    <span class="faq-q-text">Who do you work with?</span>
+                    <div class="faq-toggle">+</div>
+                </div>
+                <div class="faq-a">
+                    <div class="faq-a-inner">I work with clinics and healthcare providers, coaches and consultants, founders and startup teams, and local businesses that want to automate operations and grow their digital presence. I've delivered for clients in Nigeria, USA, Thailand, and the UK.</div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q" onclick="toggleFaq(this)">
+                    <span class="faq-q-text">How long does a project take?</span>
+                    <div class="faq-toggle">+</div>
+                </div>
+                <div class="faq-a">
+                    <div class="faq-a-inner">Most automation builds and CRM setups are complete within 2–4 weeks. Full growth strategy packages run on 90-day cycles. Social media management and ad campaigns are ongoing monthly engagements. I always agree on a clear timeline upfront.</div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q" onclick="toggleFaq(this)">
+                    <span class="faq-q-text">Do you work remotely?</span>
+                    <div class="faq-toggle">+</div>
+                </div>
+                <div class="faq-a">
+                    <div class="faq-a-inner">Yes — 100% remote, globally. I work across completely different time zones and deliver everything online. My current active clients are based in Texas (USA), London (UK), Lagos (Nigeria), and Thailand.</div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q" onclick="toggleFaq(this)">
+                    <span class="faq-q-text">What makes EAS Agency different?</span>
+                    <div class="faq-toggle">+</div>
+                </div>
+                <div class="faq-a">
+                    <div class="faq-a-inner">We build systems, not just campaigns. We combine AI automation, CRM setup, content, and advertising into one connected growth engine — so every part of your business works together, not in silos.</div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q" onclick="toggleFaq(this)">
+                    <span class="faq-q-text">Do you offer ongoing support after delivery?</span>
+                    <div class="faq-toggle">+</div>
+                </div>
+                <div class="faq-a">
+                    <div class="faq-a-inner">Yes. All systems come with a 2-week handover and full documentation. For ongoing management, I offer monthly retainer packages covering social media, ads, CRM maintenance, and automation monitoring.</div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="faq-list reveal reveal-delay-1">
-      <div class="faq-item open">
-        <div class="faq-q" onclick="toggleFaq(this)">
-          <span class="faq-q-text">Who do you work with?</span>
-          <div class="faq-toggle">+</div>
-        </div>
-        <div class="faq-a">
-          <div class="faq-a-inner">I work with clinics and healthcare providers, coaches and consultants, founders and startup teams, and local businesses that want to automate operations and grow their digital presence. I've delivered for clients in Nigeria, USA, Thailand, and the UK.</div>
-        </div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)">
-          <span class="faq-q-text">How long does a project take?</span>
-          <div class="faq-toggle">+</div>
-        </div>
-        <div class="faq-a">
-          <div class="faq-a-inner">Most automation builds and CRM setups are complete within 2–4 weeks. Full growth strategy packages run on 90-day cycles. Social media management and ad campaigns are ongoing monthly engagements. I always agree on a clear timeline upfront.</div>
-        </div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)">
-          <span class="faq-q-text">Do you work remotely?</span>
-          <div class="faq-toggle">+</div>
-        </div>
-        <div class="faq-a">
-          <div class="faq-a-inner">Yes — 100% remote, globally. I work across completely different time zones and deliver everything online. My current active clients are based in Texas (USA), London (UK), Lagos (Nigeria), and Thailand.</div>
-        </div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)">
-          <span class="faq-q-text">What makes EAS Agency different?</span>
-          <div class="faq-toggle">+</div>
-        </div>
-        <div class="faq-a">
-          <div class="faq-a-inner">We build systems, not just campaigns. We combine AI automation, CRM setup, content, and advertising into one connected growth engine — so every part of your business works together, not in silos.</div>
-        </div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)">
-          <span class="faq-q-text">How do we get started?</span>
-          <div class="faq-toggle">+</div>
-        </div>
-        <div class="faq-a">
-          <div class="faq-a-inner">Book a free 30-minute strategy call using the link at the bottom of this page. We'll discuss your business, the gaps you want to close, and whether my services are the right fit. No hard selling — just an honest conversation.</div>
-        </div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)">
-          <span class="faq-q-text">Do you offer ongoing support after delivery?</span>
-          <div class="faq-toggle">+</div>
-        </div>
-        <div class="faq-a">
-          <div class="faq-a-inner">Yes. All systems come with a 2-week handover and full documentation. For ongoing management, I offer monthly retainer packages covering social media, ads, CRM maintenance, and automation monitoring.</div>
-        </div>
-      </div>
-    </div>
-  </div>
 </section>
 
-<!-- PAGE 07 PORTFOLIO -->
+<!-- PORTFOLIO -->
 <section id="portfolio">
-  <div class="portfolio-inner">
-    <div class="portfolio-header reveal">
-      <div>
-        <div class="section-eyebrow" style="margin-bottom:14px;">
-          <div class="eyebrow-line"></div>
-          <span class="eyebrow-text dark">07 · Portfolio</span>
-        </div>
-        <h2 class="section-title">Real Clients.<br><em>Real Results.</em></h2>
-      </div>
-      <p class="section-desc" style="max-width:340px;">10+ clients across healthcare, coaching, education, pharmacy, and tech.</p>
+    <div class="section-eyebrow reveal">
+        <div class="eyebrow-line"></div>
+        <span class="eyebrow-text dark">06 · Portfolio</span>
     </div>
+    <h2 class="intro-headline reveal" style="color:var(--dt); margin-bottom:50px;">Real Clients.<br><em>Real Results.</em></h2>
+
     <div class="clients-grid">
-      <div class="client-card reveal reveal-delay-1">
-        <div class="client-geo">🇹🇭 Thailand · Healthcare</div>
-        <div class="client-name">Sabai Health</div>
-        <div class="client-industry">Health & Wellness Clinic</div>
-        <div class="client-services"><span class="client-service-tag">Meta Ads</span><span class="client-service-tag">LINE Ads</span><span class="client-service-tag">Social Media</span><span class="client-service-tag">Content Strategy</span></div>
-        <div class="client-result">Set up Meta and LINE ad accounts, built content strategy, and managed social media to grow patient acquisition in the Thai market.</div>
-      </div>
-      <div class="client-card reveal reveal-delay-2">
-        <div class="client-geo">🇺🇸 USA · HealthTech</div>
-        <div class="client-name">Providersnook</div>
-        <div class="client-industry">Healthcare Provider Platform</div>
-        <div class="client-services"><span class="client-service-tag">AI Voice Agent</span><span class="client-service-tag">CRM Setup</span><span class="client-service-tag">Email Automation</span></div>
-        <div class="client-result">Built an end-to-end AI outbound call agent using Retell.ai, ElevenLabs, and Twilio for automated lead qualification and appointment booking.</div>
-      </div>
-      <div class="client-card reveal reveal-delay-3">
-        <div class="client-geo">🇺🇸 USA · Wellness</div>
-        <div class="client-name">Zivara Health</div>
-        <div class="client-industry">Health & Wellness Brand</div>
-        <div class="client-services"><span class="client-service-tag">AI Video Pipeline</span><span class="client-service-tag">Content Automation</span><span class="client-service-tag">Social Media</span></div>
-        <div class="client-result">Built an Airtable-triggered AI video generation pipeline using Seedance and ElevenLabs to produce short-form content automatically.</div>
-      </div>
-      <div class="client-card reveal reveal-delay-1">
-        <div class="client-geo">🇳🇬 Nigeria · Psychiatry & Education</div>
-        <div class="client-name">TMBPC / CCU</div>
-        <div class="client-industry">Clinic & Higher Education</div>
-        <div class="client-services"><span class="client-service-tag">AI Content Automation</span><span class="client-service-tag">WhatsApp Bot</span><span class="client-service-tag">Growth Roadmap</span></div>
-        <div class="client-result">90-day growth roadmaps, n8n AI content automation workflows, and WhatsApp automation for student and patient intake processes.</div>
-      </div>
-      <div class="client-card reveal reveal-delay-2">
-        <div class="client-geo">🇬🇧 UK · Coaching</div>
-        <div class="client-name">Coach Frekie</div>
-        <div class="client-industry">Business Coaching</div>
-        <div class="client-services"><span class="client-service-tag">CRM Setup</span><span class="client-service-tag">Growth Strategy</span><span class="client-service-tag">Content</span><span class="client-service-tag">Tool Stack</span></div>
-        <div class="client-result">Full GoHighLevel CRM build, 90-day growth roadmap, AI tool stack selection, and social media content strategy for UK-based coach.</div>
-      </div>
-      <div class="client-card reveal reveal-delay-3">
-        <div class="client-geo">🇳🇬 Nigeria · Pharmacy</div>
-        <div class="client-name">EAS Pharmacy Nigeria</div>
-        <div class="client-industry">Retail Pharmacy</div>
-        <div class="client-services"><span class="client-service-tag">Market Entry</span><span class="client-service-tag">WhatsApp Automation</span><span class="client-service-tag">Digital Presence</span></div>
-        <div class="client-result">Full market entry strategy for Lagos pharmacy launch, WhatsApp Business API chatbot for customer intake, and complete digital presence setup.</div>
-      </div>
+        <!-- Client Card 1 -->
+        <div class="client-card reveal">
+            <p style="font-size:11px; color:var(--mint); font-weight:700; margin-bottom:10px;">🇹🇭 THAILAND · HEALTHCARE</p>
+            <h3 style="font-family:'Syne'; color:var(--dt); margin-bottom:10px;">Sabai Health</h3>
+            <p style="font-size:14px; color:var(--muted); margin-bottom:20px;">Built multi-channel ad strategies and social management for Patient Acquisition.</p>
+            <div style="display:flex; flex-wrap:wrap; gap:5px;">
+                <span style="background:var(--ml); color:var(--mt); font-size:10px; padding:4px 10px; border-radius:100px;">Meta Ads</span>
+                <span style="background:var(--ml); color:var(--mt); font-size:10px; padding:4px 10px; border-radius:100px;">LINE Ads</span>
+            </div>
+        </div>
+        <!-- Client Card 2 -->
+        <div class="client-card reveal">
+            <p style="font-size:11px; color:var(--mint); font-weight:700; margin-bottom:10px;">🇺🇸 USA · HEALTHTECH</p>
+            <h3 style="font-family:'Syne'; color:var(--dt); margin-bottom:10px;">Providersnook</h3>
+            <p style="font-size:14px; color:var(--muted); margin-bottom:20px;">AI Outbound Voice Agent for automated scheduling and lead qualification.</p>
+            <div style="display:flex; flex-wrap:wrap; gap:5px;">
+                <span style="background:var(--ml); color:var(--mt); font-size:10px; padding:4px 10px; border-radius:100px;">Retell.ai</span>
+                <span style="background:var(--ml); color:var(--mt); font-size:10px; padding:4px 10px; border-radius:100px;">Automation</span>
+            </div>
+        </div>
+        <!-- Client Card 3 -->
+        <div class="client-card reveal">
+            <p style="font-size:11px; color:var(--mint); font-weight:700; margin-bottom:10px;">🇺🇸 USA · WELLNESS</p>
+            <h3 style="font-family:'Syne'; color:var(--dt); margin-bottom:10px;">Zivara Health</h3>
+            <p style="font-size:14px; color:var(--muted); margin-bottom:20px;">Built an Airtable-triggered AI video generation pipeline to produce short-form content automatically.</p>
+            <div style="display:flex; flex-wrap:wrap; gap:5px;">
+                <span style="background:var(--ml); color:var(--mt); font-size:10px; padding:4px 10px; border-radius:100px;">AI Video</span>
+                <span style="background:var(--ml); color:var(--mt); font-size:10px; padding:4px 10px; border-radius:100px;">Seedance</span>
+            </div>
+        </div>
+        <!-- Client Card 4: TMBPC -->
+        <div class="client-card reveal">
+            <p style="font-size:11px; color:var(--mint); font-weight:700; margin-bottom:10px;">🇺🇸 USA · HEALTHCARE</p>
+            <h3 style="font-family:'Syne'; color:var(--dt); margin-bottom:10px;">TMBPC</h3>
+            <p style="font-size:14px; color:var(--muted); margin-bottom:20px;">Business growth strategies, funnel building, and CRM setup for Texas-based Mind, Behavior & Psychiatric Clinic.</p>
+            <div style="display:flex; flex-wrap:wrap; gap:5px;">
+                <span style="background:var(--ml); color:var(--mt); font-size:10px; padding:4px 10px; border-radius:100px;">Growth Strategy</span>
+                <span style="background:var(--ml); color:var(--mt); font-size:10px; padding:4px 10px; border-radius:100px;">CRM Setup</span>
+            </div>
+        </div>
+        <!-- Client Card 5: CCU -->
+        <div class="client-card reveal">
+            <p style="font-size:11px; color:var(--mint); font-weight:700; margin-bottom:10px;">🇳🇬 NIGERIA · EDUCATION / CLINIC</p>
+            <h3 style="font-family:'Syne'; color:var(--dt); margin-bottom:10px;">CCU</h3>
+            <p style="font-size:14px; color:var(--muted); margin-bottom:20px;">90-day growth roadmaps, n8n AI content automation workflows, and WhatsApp automation.</p>
+            <div style="display:flex; flex-wrap:wrap; gap:5px;">
+                <span style="background:var(--ml); color:var(--mt); font-size:10px; padding:4px 10px; border-radius:100px;">WhatsApp Bot</span>
+                <span style="background:var(--ml); color:var(--mt); font-size:10px; padding:4px 10px; border-radius:100px;">n8n</span>
+            </div>
+        </div>
+        <!-- Client Card 6 -->
+        <div class="client-card reveal">
+            <p style="font-size:11px; color:var(--mint); font-weight:700; margin-bottom:10px;">🇬🇧 UK · COACHING</p>
+            <h3 style="font-family:'Syne'; color:var(--dt); margin-bottom:10px;">Coach Frekie</h3>
+            <p style="font-size:14px; color:var(--muted); margin-bottom:20px;">Full GoHighLevel CRM build, 90-day growth roadmap, and AI tool stack selection.</p>
+            <div style="display:flex; flex-wrap:wrap; gap:5px;">
+                <span style="background:var(--ml); color:var(--mt); font-size:10px; padding:4px 10px; border-radius:100px;">GoHighLevel</span>
+                <span style="background:var(--ml); color:var(--mt); font-size:10px; padding:4px 10px; border-radius:100px;">Strategy</span>
+            </div>
+        </div>
+        <!-- Client Card 7 -->
+        <div class="client-card reveal">
+            <p style="font-size:11px; color:var(--mint); font-weight:700; margin-bottom:10px;">🇳🇬 NIGERIA · PHARMACY</p>
+            <h3 style="font-family:'Syne'; color:var(--dt); margin-bottom:10px;">EAS Pharmacy</h3>
+            <p style="font-size:14px; color:var(--muted); margin-bottom:20px;">Market entry strategy for Lagos launch, WhatsApp API chatbot, and digital presence setup.</p>
+            <div style="display:flex; flex-wrap:wrap; gap:5px;">
+                <span style="background:var(--ml); color:var(--mt); font-size:10px; padding:4px 10px; border-radius:100px;">Market Entry</span>
+                <span style="background:var(--ml); color:var(--mt); font-size:10px; padding:4px 10px; border-radius:100px;">Chatbot</span>
+            </div>
+        </div>
+        <!-- Client Card 8: WinTrade -->
+        <div class="client-card reveal">
+            <p style="font-size:11px; color:var(--mint); font-weight:700; margin-bottom:10px;">🇬🇧 UK · NETWORKING</p>
+            <h3 style="font-family:'Syne'; color:var(--dt); margin-bottom:10px;">WinTrade Global Network</h3>
+            <p style="font-size:14px; color:var(--muted); margin-bottom:20px;">Email sequence automation, Make.com workflows, and CRM management for London-based network.</p>
+            <div style="display:flex; flex-wrap:wrap; gap:5px;">
+                <span style="background:var(--ml); color:var(--mt); font-size:10px; padding:4px 10px; border-radius:100px;">Email Automation</span>
+                <span style="background:var(--ml); color:var(--mt); font-size:10px; padding:4px 10px; border-radius:100px;">Make.com</span>
+            </div>
+        </div>
     </div>
-    <div style="margin-top:48px; padding:32px 40px; background:var(--off); border-radius:20px; border:1px solid var(--border); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:20px;" class="reveal">
-      <div>
-        <div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--mt);font-weight:600;margin-bottom:8px;">Hire Me On</div>
-        <div style="font-family:'Syne',sans-serif;font-size:18px;font-weight:700;color:var(--dt);">Available for new projects worldwide</div>
-      </div>
-      <div style="display:flex;gap:12px;flex-wrap:wrap;">
-        <a href="https://www.upwork.com/freelancers/~0161170c582a8d7ce1" target="_blank" style="display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:100px;background:var(--white);border:1.5px solid var(--border);color:var(--dt);text-decoration:none;font-size:13px;font-weight:600;transition:all 0.2s;" onmouseover="this.style.borderColor='var(--mint)'" onmouseout="this.style.borderColor='var(--border)'">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0D4F52" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-4 0v2"/></svg>
-          Hire on Upwork
-        </a>
-        <a href="https://contra.com/emmie_aderemi_i8vvuh2z" target="_blank" style="display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:100px;background:var(--white);border:1.5px solid var(--border);color:var(--dt);text-decoration:none;font-size:13px;font-weight:600;transition:all 0.2s;" onmouseover="this.style.borderColor='var(--mint)'" onmouseout="this.style.borderColor='var(--border)'">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0D4F52" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12h8M12 8v8"/></svg>
-          Hire on Contra
-        </a>
-        <a href="https://wa.me/message/Z6O64VPAUCO3P1" target="_blank" style="display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:100px;background:var(--dt);color:#fff;text-decoration:none;font-size:13px;font-weight:600;transition:all 0.2s;" onmouseover="this.style.background='var(--mt)'" onmouseout="this.style.background='var(--dt)'">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.534 5.859L.054 23.25a.75.75 0 00.917.928l5.512-1.442A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.95 9.95 0 01-5.17-1.438l-.37-.22-3.833 1.003 1.022-3.728-.241-.384A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
-          WhatsApp Me
-        </a>
-      </div>
+
+    <div class="hire-strip reveal">
+        <div>
+            <div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--mt);font-weight:600;margin-bottom:8px;">Hire Me On</div>
+            <div style="font-family:'Syne',sans-serif;font-size:18px;font-weight:700;color:var(--dt);">Available for new projects worldwide</div>
+        </div>
+        <div class="hire-strip-btns">
+            <a href="https://www.upwork.com/freelancers/~0161170c582a8d7ce1" target="_blank" class="hire-btn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0D4F52" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-4 0v2"/></svg>
+                Hire on Upwork
+            </a>
+            <a href="https://contra.com/emmie_aderemi_i8vvuh2z" target="_blank" class="hire-btn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0D4F52" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12h8M12 8v8"/></svg>
+                Hire on Contra
+            </a>
+            <a href="https://wa.me/message/Z6O64VPAUCO3P1" target="_blank" class="hire-btn-primary">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.534 5.859L.054 23.25a.75.75 0 00.917.928l5.512-1.442A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.95 9.95 0 01-5.17-1.438l-.37-.22-3.833 1.003 1.022-3.728-.241-.384A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+                WhatsApp Me
+            </a>
+        </div>
     </div>
-  </div>
 </section>
+
+<!-- CTA -->
 <section id="cta">
-  <div class="cta-inner reveal">
-    <p class="cta-eyebrow">08 · Let's Work Together</p>
-    <h2 class="cta-quote">"Strong Thinking Is<br><em>Adapting New</em><br>Technology."</h2>
-    <p class="cta-sub">Let's cut your manual work and build AI-powered systems that grow your business automatically — while you sleep.</p>
-    <div class="cta-btns">
-      <a href="https://wa.me/message/Z6O64VPAUCO3P1" target="_blank" class="btn-mint">Book a Free Strategy Call &nbsp;→</a>
-      <a href="/cdn-cgi/l/email-protection#325a575e5e5d72575f5f5b575347465d5f5346571c515d5f" class="btn-ghost">Send an Email</a>
+    <div class="cta-inner reveal">
+        <p style="color:var(--mint); font-size:12px; text-transform:uppercase; letter-spacing:3px; margin-bottom:20px;">Let's scale together</p>
+        <h2 class="intro-headline" style="color:var(--white);">Ready to <em>Automate</em> Your Growth?</h2>
+        <p style="margin-bottom:40px; opacity:0.8; font-size:18px;">Book a free 30-minute strategy call to find your next automation win.</p>
+        <div class="cta-btns-wrapper" style="display:flex; gap:15px; justify-content:center; flex-wrap:wrap;">
+            <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3zeVsnvJMeIJI-Ba32yMsezB8TngImT-RAooz17wHVEnZWdygkorpLZyPwsN41ugK5QVTAVMVe?gv=true" target="_blank" class="btn-primary">Book Strategy Call</a>
+            <a href="mailto:hello@emmieautomate.com" class="btn-outline">hello@emmieautomate.com</a>
+        </div>
     </div>
-    <div class="socials-strip">
-      <a href="https://www.linkedin.com/in/emmieautomate/" class="social-link" target="_blank">LinkedIn</a>
-      <div class="social-dot"></div>
-      <a href="https://emmieautomate.com" class="social-link" target="_blank">emmieautomate.com</a>
-      <div class="social-dot"></div>
-      <a href="https://www.instagram.com/emmieautomate" class="social-link" target="_blank">Instagram</a>
-      <div class="social-dot"></div>
-      <a href="https://wa.me/message/Z6O64VPAUCO3P1" class="social-link" target="_blank">WhatsApp</a>
-    </div>
-  </div>
 </section>
 
 <footer>
-  <div class="logo">
-    <img src="https://res.cloudinary.com/ds8zdlhmt/image/upload/v1774274972/EAS_Agency_dtcyn6.png" alt="EAS Agency" style="height:48px;width:auto;object-fit:contain;filter:brightness(0) invert(1);opacity:1;">
-  </div>
-  <div class="copy">© 2026 EAS Agency · Emmanuel Aderemi · AI Automation & Digital Marketing Consultant · Serving clients worldwide</div>
-  <a href="https://emmieautomate.com" class="website" target="_blank">emmieautomate.com</a>
+    <div class="footer-logo">
+        <a href="#hero">EAS Agency</a>
+    </div>
+    <p>© 2026 EAS Agency · Emmanuel Aderemi</p>
+    <div style="margin-top:20px; display:flex; justify-content:center; gap:20px;">
+        <a href="https://www.linkedin.com/in/emmieautomate/" target="_blank" style="color:var(--mint); text-decoration:none; font-size:14px;">LinkedIn</a>
+        <a href="https://www.instagram.com/emmieautomate" target="_blank" style="color:var(--mint); text-decoration:none; font-size:14px;">Instagram</a>
+        <a href="https://www.upwork.com/freelancers/~0161170c582a8d7ce1" target="_blank" style="color:var(--mint); text-decoration:none; font-size:14px;">Upwork</a>
+    </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-const cursor = document.getElementById('cursor');
-const ring = document.getElementById('cursorRing');
-let mx = 0, my = 0, rx = 0, ry = 0;
+<script>
+    // Custom Cursor Logic
+    const cursor = document.getElementById('cursor');
+    const ring = document.getElementById('cursorRing');
+    let mx = 0, my = 0, rx = 0, ry = 0;
 
-document.addEventListener('mousemove', e => {
-  mx = e.clientX; my = e.clientY;
-  cursor.style.left = mx + 'px';
-  cursor.style.top = my + 'px';
-});
-
-(function animateRing() {
-  rx += (mx - rx) * 0.12;
-  ry += (my - ry) * 0.12;
-  ring.style.left = rx + 'px';
-  ring.style.top = ry + 'px';
-  requestAnimationFrame(animateRing);
-})();
-
-document.querySelectorAll('a, button, .faq-q, .service-card, .client-card').forEach(el => {
-  el.addEventListener('mouseenter', () => {
-    cursor.style.transform = 'translate(-50%,-50%) scale(2)';
-    ring.style.transform = 'translate(-50%,-50%) scale(1.4)';
-    ring.style.opacity = '0.8';
-  });
-  el.addEventListener('mouseleave', () => {
-    cursor.style.transform = 'translate(-50%,-50%) scale(1)';
-    ring.style.transform = 'translate(-50%,-50%) scale(1)';
-    ring.style.opacity = '0.5';
-  });
-});
-
-window.addEventListener('scroll', () => {
-  document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 60);
-});
-
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
-  });
-}, { threshold: 0.1 });
-document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-// FAQ ACCORDION
-function toggleFaq(btn) {
-  const item = btn.parentElement;
-  const isOpen = item.classList.contains('open');
-  document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
-  if (!isOpen) item.classList.add('open');
-}
-
-// GOOGLE CALENDAR BOOKING
-const calUrl = 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ3zeVsnvJMeIJI-Ba32yMsezB8TngImT-RAooz17wHVEnZWdygkorpLZyPwsN41ugK5QVTAVMVe?gv=true';
-const gcalTarget = document.getElementById('gcal-btn');
-
-function loadGcalBtn() {
-  if (window.calendar && window.calendar.schedulingButton) {
-    window.calendar.schedulingButton.load({
-      url: calUrl,
-      color: '#5CE8C4',
-      label: 'Book a Call',
-      target: gcalTarget
+    document.addEventListener('mousemove', e => {
+        mx = e.clientX; 
+        my = e.clientY;
+        cursor.style.left = mx + 'px';
+        cursor.style.top = my + 'px';
     });
-  } else {
-    gcalTarget.innerHTML = '<a href="https://wa.me/message/Z6O64VPAUCO3P1" target="_blank" style="background:#0D4F52;color:#fff;padding:10px 22px;border-radius:100px;font-size:13px;font-weight:600;text-decoration:none;font-family:Syne,sans-serif;display:inline-block;">Book a Call</a>';
-  }
-}
 
-window.addEventListener('load', function () {
-  setTimeout(loadGcalBtn, 800);
-});
+    function animateRing() {
+        rx += (mx - rx) * 0.15;
+        ry += (my - ry) * 0.15;
+        ring.style.left = rx + 'px';
+        ring.style.top = ry + 'px';
+        requestAnimationFrame(animateRing);
+    }
+    animateRing();
+
+    // Mobile Menu Toggle
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navLinks = document.getElementById('nav-links');
+
+    mobileMenu.addEventListener('click', () => {
+        mobileMenu.classList.toggle('active');
+        navLinks.classList.toggle('active');
+    });
+
+    // Close menu when link is clicked
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+            navLinks.classList.remove('active');
+        });
+    });
+
+    // Navbar Scroll Effect
+    window.addEventListener('scroll', () => {
+        const nav = document.getElementById('navbar');
+        nav.classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    // Intersection Observer for Reveal
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // FAQ Accordion Logic
+    function toggleFaq(btn) {
+        const item = btn.parentElement;
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+        if (!isOpen) item.classList.add('open');
+    }
+
+    // Google Calendar Button
+    const gcalTarget = document.getElementById('gcal-btn');
+    function loadGcal() {
+        if (window.calendar && window.calendar.schedulingButton) {
+            window.calendar.schedulingButton.load({
+                url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ3zeVsnvJMeIJI-Ba32yMsezB8TngImT-RAooz17wHVEnZWdygkorpLZyPwsN41ugK5QVTAVMVe?gv=true',
+                color: '#5CE8C4',
+                label: 'Book a Call',
+                target: gcalTarget
+            });
+        }
+    }
+    window.addEventListener('load', loadGcal);
 </script>
+
 </body>
 </html>
